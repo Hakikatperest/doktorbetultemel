@@ -350,21 +350,45 @@
       backdrop-filter: blur(4px);
     }
 
-    /* PROSEDÜR HERO */
-    .procedure-hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 3rem;
-      margin-bottom: 3rem;
+    /* ========== MODERN TAM EKRAN HERO GÖRSEL ========== */
+    .hero-full-image {
+      width: 100%;
+      max-width: 1400px;
+      margin: 2rem auto 0;
+      padding: 0 1.5rem;
     }
 
+    .hero-image-frame {
+      width: 100%;
+      border-radius: 48px;
+      overflow: hidden;
+      box-shadow: 0 25px 45px -12px rgba(106, 75, 47, 0.25);
+      background-color: #f0e2d8; /* fallback */
+      aspect-ratio: 16 / 9; /* sinema genişliği */
+      max-height: 75vh;
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .hero-image-frame:hover img {
+      transform: scale(1.02);
+    }
+
+    /* Procedure hero içeriği artık full genişlikte, görselin üstünde değil */
     .procedure-hero-content {
-      flex: 1 1 400px;
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
+      text-align: center;
     }
 
     .procedure-hero-content h1 {
-      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-size: clamp(2.8rem, 8vw, 5rem);
       color: var(--dark-brown);
       line-height: 1.1;
       margin-bottom: 1.5rem;
@@ -373,31 +397,22 @@
     .procedure-hero-content .badge {
       background: var(--golden-brown);
       color: white;
-      padding: 0.3rem 1rem;
+      padding: 0.3rem 1.2rem;
       border-radius: 60px;
       display: inline-block;
-      font-size: 0.9rem;
+      font-size: 1rem;
       letter-spacing: 0.5px;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
     }
 
     .procedure-hero-content p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #5a4a3d;
-      margin-bottom: 2rem;
-    }
-
-    .procedure-hero-image {
-      flex: 1 1 400px;
-      text-align: center;
-    }
-
-    .procedure-hero-image img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 200px;
-      box-shadow: var(--soft-shadow);
-      border: 6px solid rgba(244,237,231,0.7);
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* ÖZELLİK GRİDİ */
@@ -648,6 +663,129 @@
 
     .float-btn:hover { transform: scale(1.1); }
 
+    /* SOHBET BALONU - tam fonksiyonel */
+    .chat-bubble {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 320px;
+      background: white;
+      border-radius: 28px 28px 12px 28px;
+      box-shadow: 0 20px 40px -8px rgba(106, 75, 47, 0.3);
+      z-index: 1000;
+      padding: 1.5rem 1.2rem 1.2rem;
+      border: 1px solid rgba(176,122,63,0.2);
+      display: none; /* varsayılan gizli, JS ile göster */
+      transition: opacity 0.3s, transform 0.3s;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    .chat-bubble.show {
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .chat-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(176,122,63,0.1);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: var(--dark-brown);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: background 0.2s;
+    }
+
+    .chat-close:hover {
+      background: rgba(176,122,63,0.2);
+    }
+
+    .chat-header {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .chat-avatar {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(145deg, #b07a3f, #d4a373);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.8rem;
+    }
+
+    .chat-title h4 {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-brown);
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .chat-title p {
+      font-size: 0.8rem;
+      color: #22c55e;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .chat-title p i {
+      font-size: 0.5rem;
+    }
+
+    .chat-message {
+      background: #faf3ed;
+      padding: 1rem;
+      border-radius: 20px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+      color: #5a4a3d;
+    }
+
+    .chat-buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .chat-buttons a {
+      flex: 1;
+      text-align: center;
+      padding: 0.8rem;
+      border-radius: 60px;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.9rem;
+    }
+
+    .chat-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .chat-call {
+      background: white;
+      color: var(--dark-brown);
+      border: 1px solid var(--golden-brown);
+    }
+
     /* FOOTER - ANA SAYFA İLE BİREBİR AYNI */
     footer {
       background: rgba(253, 249, 246, 0.98);
@@ -809,21 +947,14 @@
         display: flex;
       }
 
-      .procedure-hero {
-        flex-direction: column;
-        gap: 2rem;
+      .hero-image-frame {
+        border-radius: 28px;
+        aspect-ratio: 4 / 3; /* biraz daha dikey mobilde */
+        max-height: 50vh;
       }
 
-      .procedure-hero-image {
-        order: -1;
-      }
-
-      .procedure-hero-image img {
-        max-width: 280px;
-      }
-
-      .procedure-hero-content {
-        text-align: center;
+      .procedure-hero-content p {
+        font-size: 1.1rem;
       }
 
       .features-grid {
@@ -868,6 +999,13 @@
       .footer-links {
         justify-content: center;
       }
+
+      .chat-bubble {
+        width: calc(100% - 40px);
+        right: 20px;
+        left: 20px;
+        bottom: 80px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -889,6 +1027,10 @@
         align-items: center;
         gap: 1rem;
       }
+
+      .hero-image-frame {
+        border-radius: 20px;
+      }
     }
 
     /* reveal animasyonları */
@@ -908,178 +1050,6 @@
     .reveal-delay-2 { transition-delay: 0.12s; }
     .reveal-delay-3 { transition-delay: 0.18s; }
     .reveal-delay-4 { transition-delay: 0.25s; }
-    /* ===== SOHBET BALONU (CHAT BUBBLE) - EKSİK OLAN STİLLER ===== */
-.chat-bubble {
-  position: fixed;
-  bottom: 100px;
-  right: 30px;
-  width: 320px;
-  background: white;
-  border-radius: 24px 24px 5px 24px;
-  box-shadow: 0 15px 40px rgba(106, 75, 47, 0.2);
-  z-index: 998;
-  padding: 1.5rem;
-  transform: translateY(20px);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.1, 1);
-  border: 1px solid #e9dbd2;
-}
-
-.chat-bubble.show {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
-}
-
-.chat-bubble::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  right: 20px;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid white;
-  filter: drop-shadow(0 5px 5px rgba(0,0,0,0.05));
-}
-
-.chat-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--golden-brown);
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  transition: background 0.2s;
-  z-index: 999;
-}
-
-.chat-close:hover {
-  background: rgba(176,122,63,0.1);
-}
-
-.chat-header {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  margin-bottom: 1rem;
-}
-
-.chat-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #c99e6e, #b07a3f);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.5rem;
-}
-
-.chat-title h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  color: var(--dark-brown);
-  margin-bottom: 0.2rem;
-}
-
-.chat-title p {
-  font-size: 0.8rem;
-  color: #25D366;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.chat-title p i {
-  font-size: 0.6rem;
-  color: #25D366;
-}
-
-.chat-message {
-  font-size: 0.95rem;
-  color: #5a4a3d;
-  margin-bottom: 1.2rem;
-  line-height: 1.5;
-  background: #faf6f2;
-  padding: 0.8rem;
-  border-radius: 16px;
-}
-
-.chat-buttons {
-  display: flex;
-  gap: 0.8rem;
-}
-
-.chat-buttons a {
-  flex: 1;
-  text-align: center;
-  padding: 0.8rem;
-  border-radius: 60px;
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.chat-buttons a::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
-  opacity: 0;
-  transform: rotate(25deg);
-  animation: shine 6s infinite;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.chat-whatsapp {
-  background: #25D366;
-  color: white;
-}
-
-.chat-call {
-  background: var(--golden-brown);
-  color: white;
-}
-
-/* Mobil için sohbet balonu düzenlemesi */
-@media (max-width: 768px) {
-  .chat-bubble {
-    width: 280px;
-    right: 15px;
-    bottom: 90px;
-  }
-}
-
-/* Işıma (shine) animasyonu - eğer yoksa eklenmeli */
-@keyframes shine {
-  0% { transform: translateX(-100%) rotate(25deg); opacity: 0.6; }
-  20% { transform: translateX(100%) rotate(25deg); opacity: 0.6; }
-  100% { transform: translateX(100%) rotate(25deg); opacity: 0.6; }
-}
   </style>
 </head>
 <body>
@@ -1128,24 +1098,26 @@
     </div>
   </div>
 
-  <!-- PROSEDÜR HERO BÖLÜMÜ - Biyolojik Lifting Görseli -->
-  <section class="container">
-    <div class="procedure-hero">
-      <div class="procedure-hero-content">
-        <span class="badge">Doğal Gençleşme</span>
-        <h1>Biyolojik Lifting</h1>
-        <p>Hyaluronik asit, somon DNA ve antioksidanlarla cildinizin kendini yenilemesine yardımcı olan ameliyatsız gençleştirme yöntemi.</p>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="https://wa.me/905438207206" class="btn-gold"><i class="fab fa-whatsapp"></i> Randevu Al</a>
-          <a href="#sss" class="btn-gold btn-outline-gold">Sıkça Sorulanlar</a>
-        </div>
-      </div>
-      <div class="procedure-hero-image">
-        <!-- Biyolojik Lifting görseli -->
-        <img src="https://www.doktorbetultemel.com/images/biyolojik-lifting.webp" alt="Biyolojik Lifting" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22500%22%20height%3D%22500%22%20viewBox%3D%220%200%20500%20500%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23f4ede7%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%236a4b2f%22%20font-size%3D%2224%22%3EBiyolojik Lifting%3C%2Ftext%3E%3C%2Fsvg%3E';">
+  <!-- PROSEDÜR HERO İÇERİK (BAŞLIK YAZI) -->
+  <section class="container" style="padding-bottom: 1rem;">
+    <div class="procedure-hero-content">
+      <span class="badge">Doğal Gençleşme</span>
+      <h1>Biyolojik Lifting</h1>
+      <p>Hyaluronik asit, somon DNA ve antioksidanlarla cildinizin kendini yenilemesine yardımcı olan ameliyatsız gençleştirme yöntemi.</p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="https://wa.me/905438207206" class="btn-gold"><i class="fab fa-whatsapp"></i> Randevu Al</a>
+        <a href="#sss" class="btn-gold btn-outline-gold">Sıkça Sorulanlar</a>
       </div>
     </div>
   </section>
+
+  <!-- MODERN TAM EKRAN GÖRSEL (ÇERÇEVEDEN ÇIKARILDI) -->
+  <div class="hero-full-image">
+    <div class="hero-image-frame">
+      <!-- Biyolojik Lifting görseli artık devasa ve modern -->
+      <img src="https://www.doktorbetultemel.com/images/biyolojik-lifting.webp" alt="Biyolojik Lifting uygulama görseli" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221600%22%20height%3D%22900%22%20viewBox%3D%220%200%201600%20900%22%3E%3Crect%20width%3D%221600%22%20height%3D%22900%22%20fill%3D%22%23f4ede7%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%236a4b2f%22%20font-size%3D%2248%22%3EBiyolojik Lifting%3C%2Ftext%3E%3C%2Fsvg%3E';">
+    </div>
+  </div>
 
   <!-- BİYOLOJİK LİFTİNG NEDİR? -->
   <section class="container">
@@ -1156,10 +1128,11 @@
         <p style="font-size: 1.1rem;">Bu yöntem, cildin kendi kolajen ve elastin üretimini tetikleyerek zamanla daha sıkı, parlak ve genç bir görünüm kazanmasını sağlar. Özellikle yüz, boyun, dekolte ve el bölgesinde tercih edilir.</p>
       </div>
       <div style="flex: 1 1 300px; display: flex; justify-content: center;">
-        <div style="background: #fcf0e9; border-radius: 40px; padding: 2rem; text-align: center;">
-          <i class="fas fa-dna" style="font-size: 5rem; color: var(--golden-brown); margin-bottom: 1.5rem;"></i>
-          <h3 style="color: var(--dark-brown);">Somon DNA Teknolojisi</h3>
-          <p>Cilt yenilenmesini hızlandıran polinükleotidler sayesinde uzun süreli etki.</p>
+        <!-- Somon DNA kartı - arka plan görseli eklendi -->
+        <div style="background: linear-gradient(0deg, rgba(106,75,47,0.65), rgba(106,75,47,0.65)), url('https://www.doktorbetultemel.com/images/somon-dna.webp'); background-size: cover; background-position: center; border-radius: 40px; padding: 2rem; text-align: center; color: white; box-shadow: var(--soft-shadow); min-width: 260px;">
+          <i class="fas fa-dna" style="font-size: 5rem; color: white; margin-bottom: 1.5rem; text-shadow: 0 2px 5px rgba(0,0,0,0.3);"></i>
+          <h3 style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Somon DNA Teknolojisi</h3>
+          <p style="color: rgba(255,255,255,0.95); text-shadow: 0 1px 3px rgba(0,0,0,0.3);">Cilt yenilenmesini hızlandıran polinükleotidler sayesinde uzun süreli etki.</p>
         </div>
       </div>
     </div>
@@ -1336,7 +1309,7 @@
     <a href="tel:+905438207206" class="float-btn phone"><i class="fas fa-phone"></i></a>
   </div>
 
-  <!-- SOHBET BALONU - KAPATMA İKONLU -->
+  <!-- SOHBET BALONU - KAPATMA İKONLU, tam fonksiyonel -->
   <div class="chat-bubble" id="chatBubble">
     <button class="chat-close" id="chatClose" aria-label="Kapat"><i class="fas fa-times"></i></button>
     <div class="chat-header">
@@ -1414,11 +1387,24 @@
 
       // Sohbet balonunu kapat
       if (chatClose) {
-        chatClose.addEventListener('click', () => {
+        chatClose.addEventListener('click', (e) => {
+          e.stopPropagation();
           chatBubble.classList.remove('show');
           chatDismissed = true;
+          // Local storage'a kaydederek her sayfa yenilemede çıkmasını engelleyebiliriz (opsiyonel)
+          // localStorage.setItem('chatDismissed', 'true');
         });
       }
+
+      // Sayfa yüklendiğinde sohbet balonunu göster (eğer daha önce kapatılmamışsa)
+      // localStorage kontrolü eklenebilir, ancak şimdilik sadece session bazlı çalışsın
+      
+      // Sohbet balonunu 5 saniye sonra göster (daha hızlı test için 5 saniye)
+      setTimeout(() => {
+        if (!chatDismissed) {
+          chatBubble.classList.add('show');
+        }
+      }, 5000); // 5 saniye sonra göster
 
       // accordion (tümü kapalı başlar)
       const accordionItems = document.querySelectorAll('.accordion-item');
@@ -1453,18 +1439,6 @@
           }
         });
       });
-
-      // Mobilde 10 saniye sonra sohbet balonunu aç
-      if (chatBubble) {
-        const isMobile = window.innerWidth <= 768;
-        if (isMobile) {
-          setTimeout(() => {
-            if (!chatDismissed) {
-              chatBubble.classList.add('show');
-            }
-          }, 10000);
-        }
-      }
 
       // Scroll reveal animasyonu
       const revealElements = document.querySelectorAll('.section-title, .about-grid, .features-grid, .steps-container, .faq-grid, .contact-wrapper');
