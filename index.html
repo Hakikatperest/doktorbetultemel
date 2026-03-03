@@ -687,6 +687,163 @@
         grid-template-columns: 1fr; 
       }
     }
+    /* ===== KESİN MOBİL TAŞMA ÇÖZÜMÜ ===== */
+@media (max-width: 768px) {
+
+  /* 1. Genel taşmayı engelle */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  /* 2. Container padding ayarı (ana sebep) */
+  .container {
+    padding: 3rem 1rem; /* 1.2rem yerine 1rem daha güvenli */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* 3. Hero bölümü düzeltmesi */
+  .hero {
+    padding: 0 1rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2rem; /* Gerekirse boşluk azaltılabilir */
+  }
+
+  /* 4. About-grid padding düzeltmesi (ikinci ana sebep) */
+  .about-grid {
+    padding: 2rem 1rem; /* 2.5rem'den 1rem'e düşürüldü */
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    background-size: 50px 50px; /* Arkaplan deseni biraz küçültülebilir */
+  }
+
+  /* 5. İstatistik barı düzeltmesi */
+  .stats-bar {
+    padding: 1.2rem 1rem;
+    width: 100%;
+  }
+
+  /* 6. Hero görseli boyutu ve taşma kontrolü */
+  .hero-image {
+    width: 100%;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 280px; /* Biraz daha küçük, daha güvenli */
+    height: auto;
+    border-radius: 50%; /* Mobilde zaten 50% yapıyorsun, burada netleştirelim */
+    display: block; /* inline elementlerin altında oluşabilecek boşlukları engeller */
+    margin: 0 auto; /* Ortala */
+  }
+
+  /* 7. İletişim wrapper'ı düzeltmesi */
+  .contact-wrapper {
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+
+  .contact-info {
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+
+  .map-container {
+    width: 100%;
+  }
+  
+  .map-container iframe {
+    width: 100%;
+    height: 280px; /* Mobilde biraz daha düşük olabilir */
+  }
+
+  /* 8. Servis kartları grid'i düzeltmesi */
+  .services-grid {
+    gap: 1rem; /* Boşluk azaltıldı */
+  }
+
+  .service-card {
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+
+  /* 9. FAQ grid düzeltmesi */
+  .faq-grid {
+    gap: 1rem;
+  }
+
+  .accordion-item {
+    padding: 0 1rem;
+    width: 100%;
+  }
+
+  /* 10. Footer düzeltmesi */
+  footer {
+    padding: 3rem 1rem 2rem;
+    width: 100%;
+  }
+
+  .footer-inner {
+    gap: 2rem;
+    width: 100%;
+  }
+
+  /* 11. Floating butonların konumu (isteğe bağlı) */
+  .floating-buttons {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .float-btn {
+    width: 56px;
+    height: 56px;
+    font-size: 2rem;
+  }
+
+  /* 12. Görsel kartların düzeltmesi */
+  .visual-card {
+    width: 140px; /* Biraz küçültüldü */
+    height: 180px;
+    padding: 1rem;
+  }
+}
+
+/* ===== EKSTRA KÜÇÜK EKRANLAR (400PX VE ALTI) ===== */
+@media (max-width: 400px) {
+  .container {
+    padding: 2.5rem 0.8rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem; /* Başlık boyutu küçültüldü */
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .btn-gold {
+    padding: 0.8rem 1.5rem; /* Butonlar biraz küçültüldü */
+    font-size: 0.95rem;
+  }
+
+  .visual-card {
+    width: 120px;
+    height: 160px;
+  }
+  
+  .visual-card i {
+    font-size: 2.5rem;
+  }
+  
+  .visual-card span {
+    font-size: 0.9rem;
+  }
+}
 
     @media (max-width: 600px) {
       .services-grid {
