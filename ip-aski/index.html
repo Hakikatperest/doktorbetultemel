@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>İp Askı (İp Lifting) | Dr. Betül Temel</title>
+  <!-- SEO & Meta -->
+  <meta name="description" content="Pdo ipler ile yüz ve boyun bölgesinde cerrahi olmayan sıkılaşma ve kaldırma. Dr. Betül Temel ile ip askı (ip lifting) hakkında detaylı bilgi.">
+  <meta name="keywords" content="ip askı, ip lifting, pdo iplik, yüz germe, kaş kaldırma, boyun germe, dr betül temel">
+  <!-- Fonts: Zarif serif + modern sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* STILLER - Önceki sayfalarla birebir aynı, değişiklik yok */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --beige: #f4ede7;
+      --cream: #faf6f2;
+      --golden-brown: #b07a3f;
+      --dark-brown: #6a4b2f;
+      --soft-black: #2e2a27;
+      --light-bg: #fdf9f6;
+      --card-bg: #ffffffd9;
+      --soft-shadow: 0 15px 35px -10px rgba(106, 75, 47, 0.08);
+      --border-radius-card: 32px;
+      --border-radius-btn: 40px;
+      --border-radius-section: 36px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--soft-black);
+      line-height: 1.5;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    h1, h2, h3, h4, .serif-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      color: var(--dark-brown);
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.2;
+      word-wrap: break-word;
+    }
+
+    .section-title span {
+      color: var(--golden-brown);
+      font-weight: 500;
+      border-bottom: 2px solid rgba(176,122,63,0.2);
+      padding-bottom: 4px;
+    }
+
+    header {
+      background-color: rgba(253, 249, 246, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #e9dbd2;
+      width: 100%;
+    }
+
+    .navbar {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo a {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 700;
+      color: var(--dark-brown);
+      text-decoration: none;
+      line-height: 1.2;
+      display: block;
+    }
+
+    .logo span {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(0.7rem, 2vw, 0.9rem);
+      color: var(--golden-brown);
+      display: block;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+      margin-top: 2px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--dark-brown);
+      font-size: 1rem;
+      position: relative;
+      padding-bottom: 6px;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--golden-brown), #d4a373);
+      transition: width 0.25s ease;
+      border-radius: 4px;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+      background: rgba(176, 122, 63, 0.08);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.2s;
+      z-index: 1002;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2.5px;
+      background: var(--dark-brown);
+      margin: 3px 0;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .hamburger:hover {
+      background: rgba(176, 122, 63, 0.15);
+    }
+
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(5px);
+      z-index: 1001;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .menu-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .mobile-menu-panel {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fdf3ec;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      padding: 2rem 1.5rem 2.5rem;
+      box-shadow: 0 -10px 40px rgba(106, 75, 47, 0.15);
+      z-index: 1002;
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.1, 1);
+      border-top: 2px solid rgba(176,122,63,0.2);
+    }
+
+    .mobile-menu-panel.show {
+      transform: translateY(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #e9cfc0;
+    }
+
+    .mobile-menu-header .menu-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--dark-brown);
+    }
+
+    .close-menu {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var(--golden-brown);
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+
+    .close-menu:hover {
+      background: rgba(176,122,63,0.1);
+    }
+
+    .mobile-nav-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-nav-items a {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--dark-brown);
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 60px;
+      transition: all 0.2s;
+      display: block;
+      text-align: center;
+      letter-spacing: -0.02em;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(176,122,63,0.2);
+    }
+
+    .mobile-nav-items a:active {
+      background: var(--golden-brown);
+      color: white;
+      transform: scale(0.97);
+    }
+
+    .mobile-menu-contact {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .mobile-menu-contact a {
+      flex: 1;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 60px;
+      font-weight: 600;
+      background: white;
+      color: var(--dark-brown);
+      text-decoration: none;
+      border: 1px solid var(--golden-brown);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .mobile-menu-contact a:first-child {
+      background: var(--golden-brown);
+      color: white;
+      border: none;
+    }
+
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 2rem;
+      border-radius: var(--border-radius-btn);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      background: linear-gradient(135deg, #c99e6e, #b07a3f, #a26d37);
+      color: white;
+      box-shadow: 0 10px 20px -8px rgba(176, 122, 63, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      cursor: pointer;
+      gap: 8px;
+    }
+
+    .btn-gold i {
+      font-size: 1rem;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 25px -8px rgba(176,122,63,0.45);
+    }
+
+    .btn-outline-gold {
+      background: transparent;
+      border: 1.5px solid var(--golden-brown);
+      color: var(--dark-brown);
+      box-shadow: none;
+      background: rgba(255,255,255,0.4);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-full-image {
+      width: 100%;
+      max-width: 1400px;
+      margin: 2rem auto 0;
+      padding: 0 1.5rem;
+    }
+
+    .hero-image-frame {
+      width: 100%;
+      border-radius: 48px;
+      overflow: hidden;
+      box-shadow: 0 25px 45px -12px rgba(106, 75, 47, 0.25);
+      background-color: #f0e2d8;
+      aspect-ratio: 16 / 9;
+      max-height: 75vh;
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .hero-image-frame:hover img {
+      transform: scale(1.02);
+    }
+
+    .procedure-hero-content {
+      max-width: 900px;
+      margin: 0 auto 3rem auto;
+      text-align: center;
+    }
+
+    .procedure-hero-content h1 {
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      color: var(--dark-brown);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .procedure-hero-content .badge {
+      background: var(--golden-brown);
+      color: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 60px;
+      display: inline-block;
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    .procedure-hero-content p {
+      font-size: 1.3rem;
+      color: #5a4a3d;
+      margin-bottom: 2.5rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--soft-shadow);
+      border: 1px solid #f5ebe4;
+    }
+
+    .feature-card i {
+      font-size: 2.8rem;
+      color: var(--golden-brown);
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--dark-brown);
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #5f4e45;
+    }
+
+    .steps-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .step-item {
+      flex: 1 1 200px;
+      background: #faf3ed;
+      border-radius: 30px;
+      padding: 2rem 1.2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      background: var(--golden-brown);
+      color: white;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto 1rem;
+    }
+
+    .step-item h4 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+      color: var(--dark-brown);
+    }
+
+    .info-box {
+      background: var(--beige);
+      border-radius: 32px;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      margin: 3rem 0;
+    }
+
+    .info-box-icon {
+      font-size: 3.5rem;
+      color: var(--golden-brown);
+      min-width: 80px;
+      text-align: center;
+    }
+
+    .info-box-content {
+      flex: 1;
+    }
+
+    .info-box-content h3 {
+      font-size: 1.8rem;
+      color: var(--dark-brown);
+      margin-bottom: 1rem;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2rem;
+      width: 100%;
+    }
+
+    .accordion-item {
+      background: white;
+      border-radius: 24px;
+      padding: 0 1.2rem;
+      box-shadow: var(--soft-shadow);
+      border: 1px solid #eddacd;
+      transition: all 0.2s;
+    }
+
+    .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 0;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--dark-brown);
+      font-size: 1.1rem;
+      gap: 1rem;
+    }
+
+    .accordion-header i {
+      color: var(--golden-brown);
+      font-size: 1.4rem;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      color: #5a4a3d;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 250px;
+      padding-bottom: 1.2rem;
+      border-top: 1px solid #f0ddd2;
+    }
+
+    .accordion-item.active .accordion-header i {
+      transform: rotate(45deg);
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: var(--beige);
+      border-radius: 48px;
+      padding: 1.5rem;
+      box-shadow: var(--soft-shadow);
+      width: 100%;
+    }
+
+    .contact-info {
+      flex: 1 1 300px;
+      background: white;
+      border-radius: 36px;
+      padding: 2rem 1.5rem;
+      min-width: 260px;
+    }
+
+    .contact-info h3 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--dark-brown);
+      margin-bottom: 1.5rem;
+    }
+
+    .info-line {
+      margin: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      word-break: break-word;
+    }
+
+    .info-line i {
+      width: 40px;
+      height: 40px;
+      background: #f4ede7;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--golden-brown);
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .map-container {
+      flex: 2 1 500px;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: var(--soft-shadow);
+      border: 2px solid white;
+      min-height: 300px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      display: block;
+    }
+
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .float-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 8px 18px -5px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    .float-btn.whatsapp { background: #25D366; }
+    .float-btn.phone { background: linear-gradient(145deg, #b07a3f, #8f623a); }
+
+    .float-btn:hover { transform: scale(1.1); }
+
+    .chat-bubble {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 320px;
+      background: white;
+      border-radius: 28px 28px 12px 28px;
+      box-shadow: 0 20px 40px -8px rgba(106, 75, 47, 0.3);
+      z-index: 1000;
+      padding: 1.5rem 1.2rem 1.2rem;
+      border: 1px solid rgba(176,122,63,0.2);
+      display: none;
+      transition: opacity 0.3s, transform 0.3s;
+      transform: translateY(20px);
+      opacity: 0;
+    }
+
+    @media (min-width: 769px) {
+      .chat-bubble {
+        display: none !important;
+      }
+    }
+
+    .chat-bubble.show {
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .chat-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(176,122,63,0.1);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      color: var(--dark-brown);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: background 0.2s;
+    }
+
+    .chat-close:hover {
+      background: rgba(176,122,63,0.2);
+    }
+
+    .chat-header {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .chat-avatar {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(145deg, #b07a3f, #d4a373);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.8rem;
+    }
+
+    .chat-title h4 {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-brown);
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .chat-title p {
+      font-size: 0.8rem;
+      color: #22c55e;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .chat-title p i {
+      font-size: 0.5rem;
+    }
+
+    .chat-message {
+      background: #faf3ed;
+      padding: 1rem;
+      border-radius: 20px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+      color: #5a4a3d;
+    }
+
+    .chat-buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .chat-buttons a {
+      flex: 1;
+      text-align: center;
+      padding: 0.8rem;
+      border-radius: 60px;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      font-size: 0.9rem;
+    }
+
+    .chat-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .chat-call {
+      background: white;
+      color: var(--dark-brown);
+      border: 1px solid var(--golden-brown);
+    }
+
+    footer {
+      background: rgba(253, 249, 246, 0.98);
+      backdrop-filter: blur(12px);
+      color: var(--dark-brown);
+      padding: 3rem 1.5rem 2rem;
+      margin-top: 4rem;
+      width: 100%;
+      border-top: 1px solid #e9dbd2;
+      box-shadow: 0 -10px 30px -10px rgba(0,0,0,0.05);
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      min-width: 200px;
+    }
+
+    .footer-brand .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--dark-brown);
+      line-height: 1.2;
+    }
+
+    .footer-brand .slogan {
+      font-size: 0.9rem;
+      color: var(--golden-brown);
+      letter-spacing: 0.5px;
+    }
+
+    .footer-services {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-width: 200px;
+    }
+
+    .footer-services h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--dark-brown);
+      margin-bottom: 0.2rem;
+      border-bottom: 2px solid rgba(176,122,63,0.15);
+      padding-bottom: 0.3rem;
+      display: inline-block;
+    }
+
+    .footer-services a {
+      color: var(--dark-brown);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s, padding-left 0.2s;
+      font-weight: 400;
+      opacity: 0.9;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .footer-services a:hover {
+      color: var(--golden-brown);
+      padding-left: 4px;
+      opacity: 1;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      transition: all 0.2s;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .footer-social a.instagram {
+      background: linear-gradient(45deg, #f09433 0%, #d62976 40%, #962fbf 80%, #4f5bd5 100%);
+      color: white;
+    }
+    .footer-social a.facebook {
+      background: #1877F2;
+      color: white;
+    }
+    .footer-social a.whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    .footer-social a:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--dark-brown);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: var(--golden-brown);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--golden-brown);
+      border-top: 1px solid rgba(176,122,63,0.15);
+      margin-top: 2rem;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 0.75rem 1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero-image-frame {
+        border-radius: 28px;
+        aspect-ratio: 4 / 3;
+        max-height: 50vh;
+      }
+
+      .procedure-hero-content p {
+        font-size: 1.1rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .contact-wrapper {
+        padding: 1rem;
+      }
+
+      .contact-info {
+        padding: 1.5rem;
+      }
+
+      .map-container {
+        min-height: 280px;
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .footer-services {
+        align-items: center;
+      }
+
+      .footer-services a {
+        width: auto;
+      }
+
+      .footer-social {
+        justify-content: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
+
+      .chat-bubble {
+        width: calc(100% - 40px);
+        right: 20px;
+        left: 20px;
+        bottom: 80px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 3rem 1rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-gold {
+        width: 100%;
+        padding: 0.9rem 1rem;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .hero-image-frame {
+        border-radius: 20px;
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform, opacity;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.05s; }
+    .reveal-delay-2 { transition-delay: 0.12s; }
+    .reveal-delay-3 { transition-delay: 0.18s; }
+    .reveal-delay-4 { transition-delay: 0.25s; }
+  </style>
+</head>
+<body>
+  <!-- HEADER - ANA SAYFA İLE BİREBİR AYNI -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="https://www.doktorbetultemel.com/">Dr. Betül Temel</a>
+        <span>Estetik & Kozmetoloji</span>
+      </div>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="https://www.doktorbetultemel.com/">Ana Sayfa</a></li>
+        <li><a href="https://www.doktorbetultemel.com/#hakkinda">Hakkımda</a></li>
+        <li><a href="https://www.doktorbetultemel.com/#islemler">İşlemler</a></li>
+        <li><a href="https://www.doktorbetultemel.com/#sss">Merak Edilenler</a></li>
+        <li><a href="https://www.doktorbetultemel.com/#iletisim">İletişim</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="mobile-menu-panel" id="mobileMenuPanel">
+    <div class="mobile-menu-header">
+      <span class="menu-title">Menü</span>
+      <button class="close-menu" id="closeMenu" aria-label="Kapat"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-nav-items">
+      <a href="https://www.doktorbetultemel.com/">Ana Sayfa</a>
+      <a href="https://www.doktorbetultemel.com/#hakkinda">Hakkımda</a>
+      <a href="https://www.doktorbetultemel.com/#islemler">İşlemler</a>
+      <a href="https://www.doktorbetultemel.com/#sss">Merak Edilenler</a>
+      <a href="https://www.doktorbetultemel.com/#iletisim">İletişim</a>
+    </div>
+    <div class="mobile-menu-contact">
+      <a href="tel:+905438207206"><i class="fas fa-phone"></i> Ara</a>
+      <a href="https://wa.me/905438207206"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- PROSEDÜR HERO İÇERİK (BAŞLIK YAZI) - İP ASKI İÇİN GÜNCELLENDİ -->
+  <section class="container" style="padding-bottom: 1rem;">
+    <div class="procedure-hero-content">
+      <span class="badge">Cerrahi Olmayan Yüz Germe</span>
+      <h1>İp Askı (İp Lifting)</h1>
+      <p>PDO iplikler ile yüz, boyun ve kaş bölgesinde cerrahi gerektirmeyen kaldırma ve sıkılaştırma etkisi. Cilt altında kolajen üretimini tetikleyerek uzun süreli gençleşme sağlar.</p>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+        <a href="https://wa.me/905438207206" class="btn-gold"><i class="fab fa-whatsapp"></i> Randevu Al</a>
+        <a href="#sss" class="btn-gold btn-outline-gold">Sıkça Sorulanlar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODERN TAM EKRAN GÖRSEL (placeholder) - GÖRSEL LİNKİ VERİLMEDİĞİ İÇİN YEDEK KULLANILDI -->
+  <div class="hero-full-image">
+    <div class="hero-image-frame">
+      <!-- İp Askı görsel - link verilmediği için yedek içerik -->
+      <img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221600%22%20height%3D%22900%22%20viewBox%3D%220%200%201600%20900%22%3E%3Crect%20width%3D%221600%22%20height%3D%22900%22%20fill%3D%22%23f4ede7%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%236a4b2f%22%20font-size%3D%2248%22%3Eİp Askı Uygulaması%3C%2Ftext%3E%3C%2Fsvg%3E" alt="İp Askı uygulama görseli">
+    </div>
+  </div>
+
+  <!-- İP ASKI NEDİR? - AÇIKLAMA VE 2. GÖRSEL (placeholder) -->
+  <section class="container">
+    <div class="about-grid" style="background: #fff; background-image: none; padding: 2rem;">
+      <div style="flex: 1 1 400px;">
+        <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;"><span>İp Askı</span> Nedir?</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">İp askı (ip lifting), özel olarak tasarlanmış PDO (Polidioksanon) ipliklerin ince iğneler yardımıyla cilt altına yerleştirilmesi işlemidir. Bu iplikler, sarkmış yumuşak dokuları mekanik olarak kaldırırken, aynı zamanda ciltte güçlü bir kolajen üretimini tetikleyerek uzun vadede sıkılaşma ve yenilenme sağlar.</p>
+        <p style="font-size: 1.1rem;">Özellikle yüz (yanaklar, çene hattı, kaşlar), boyun ve dekolte bölgesindeki hafif ve orta dereceli sarkmalar için cerrahi yüz germeye güçlü bir alternatiftir.</p>
+      </div>
+      <div style="flex: 1 1 300px; display: flex; justify-content: center;">
+        <!-- İp Askı Görsel 2 - link verilmediği için yedek içerik -->
+        <div style="background: linear-gradient(0deg, rgba(106,75,47,0.4), rgba(106,75,47,0.4)), url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22400%22%20viewBox%3D%220%200%20400%20400%22%3E%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22%236a4b2f%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%23ffffff%22%20font-size%3D%2232%22%3Eİp Teknolojisi%3C%2Ftext%3E%3C%2Fsvg%3E'); background-size: cover; background-position: center; border-radius: 40px; padding: 2rem; text-align: center; color: white; box-shadow: var(--soft-shadow); min-width: 260px;">
+          <i class="fas fa-arrows-alt-v" style="font-size: 5rem; color: white; margin-bottom: 1.5rem; text-shadow: 0 2px 5px rgba(0,0,0,0.3);"></i>
+          <h3 style="color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.4);">Anında Kaldırma</h3>
+          <p style="color: rgba(255,255,255,0.95); text-shadow: 0 1px 3px rgba(0,0,0,0.3);">PDO iplikler ile sarkan dokular anında toparlanır, zamanla cilt kendi kendini yeniler.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÖNE ÇIKAN ÖZELLİKLER - İP ASKI'YA ÖZEL -->
+  <section class="container">
+    <h2 class="section-title"><span>İp Askı'nın</span> Avantajları</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-arrow-up"></i>
+        <h4>Anında Kaldırma</h4>
+        <p>İşlem sonrası sarkmış bölgelerde hemen görünür bir toparlanma ve kaldırma etkisi elde edilir.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-sync-alt"></i>
+        <h4>Kolajen Uyarımı</h4>
+        <p>İplikler zamanla erirken çevresinde yeni kolajen sentezlenir, bu da cilt kalitesini artırır.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-clock"></i>
+        <h4>Hızlı İyileşme</h4>
+        <p>Cerrahiye göre iyileşme süresi çok daha kısadır. Birkaç gün içinde sosyal hayata dönülür.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-calendar-alt"></i>
+        <h4>Uzun Ömürlü Sonuç</h4>
+        <p>Kullanılan iplik tipine bağlı olarak etkiler 1.5 - 2 yıla kadar kalıcı olabilir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- UYGULAMA AŞAMALARI - İP ASKI İÇİN GÜNCELLENDİ -->
+  <section class="container">
+    <h2 class="section-title"><span>Uygulama</span> Aşamaları</h2>
+    <div class="steps-container">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <h4>Konsültasyon</h4>
+        <p>Yüz anatomisi ve sarkma derecesi değerlendirilir, en uygun iplik tipi ve yerleşim planı belirlenir.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <h4>Anestezi</h4>
+        <p>Uygulama bölgesine lokal anestezi yapılarak işlem konforu sağlanır.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <h4>İp Yerleştirme</h4>
+        <p>Özel kanüller veya iğneler yardımıyla iplikler cilt altına hassas bir şekilde yerleştirilir.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <h4>Şekillendirme</h4>
+        <p>İpler istenen yönde çekilerek dokular kaldırılır ve sabitlenir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KİMLER İÇİN UYGUN? - İP ASKI İÇİN GÜNCELLENDİ -->
+  <section class="container">
+    <div class="info-box">
+      <div class="info-box-icon">
+        <i class="fas fa-users"></i>
+      </div>
+      <div class="info-box-content">
+        <h3>Kimler İçin Uygun?</h3>
+        <p>Yanaklarda, çene hattında, kaşlarda veya boyunda hafif-orta dereceli sarkma olanlar, cerrahi bir operasyona hazır olmayan veya sıcak bakmayan 35-55 yaş arası danışanlar için idealdir. Cilt kalitesini artırmak ve yüz hatlarını belirginleştirmek isteyen herkes için uygundur.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MERAK EDİLENLER (İP ASKI ÖZEL) - TAMAMEN GÜNCELLENDİ -->
+  <section id="sss" class="container">
+    <h2 class="section-title"><span>İp Askı</span> Merak Edilenler</h2>
+    <div class="faq-grid">
+      <div class="accordion-item">
+        <div class="accordion-header"><span>İşlem ne kadar sürer?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>Uygulama yapılan bölgeye ve kullanılan ip sayısına bağlı olarak 30-60 dakika arasında tamamlanır.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>İyileşme süresi nasıldır?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>İşlem sonrası birkaç gün sürebilen hafif şişlik, morluk ve gerginlik hissi olabilir. 1 hafta içinde büyük ölçüde iyileşme sağlanır, 1-2 hafta sonra sosyal hayata dönülebilir.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>İpler hissedilir mi veya dışarıdan belli olur mu?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>Doğru şekilde yerleştirildiğinde ipler hissedilmez ve dışarıdan görünmez. İyileşme döneminde ince uçlar ağız içinde hafifçe ele gelebilir, bu geçicidir.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>İpler ne zaman erir?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>PDO iplikler genellikle 6-8 ay içinde vücut tarafından tamamen emilir. Ancak onlar erirken uyardıkları kolajen doku sayesinde kaldırma etkisi 1.5-2 yıla kadar devam edebilir.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>Hangi bölgelere uygulanır?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>En sık yüz (yanaklar, elmacık, çene hattı), kaşlar, boyun ve gıdı bölgesine uygulanır. Ayrıca kollara, karın bölgesine ve diz içlerine de uygulanabilir.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>Acı hissedilir mi?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>Lokal anestezi altında yapıldığı için işlem sırasında ağrı hissedilmez. İşlem sonrası hafif bir hassasiyet olabilir, basit ağrı kesicilerle kontrol altına alınabilir.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>Diğer işlemlerle kombine edilebilir mi?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>Evet. İp askı genellikle dolgu, botoks, mezoterapi veya PRP gibi işlemlerle kombine edilerek daha kapsamlı bir gençleşme sağlanabilir. Seanslar genellikle aynı gün veya birkaç hafta ara ile planlanır.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>Yan etkisi var mı?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>Geçici şişlik, morluk, hassasiyet en sık görülen etkilerdir. Çok nadiren enfeksiyon, ip dışarı çıkması veya asimetri görülebilir. Tecrübeli bir hekim tarafından uygulandığında riskler minimumdur.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM + HARİTA (ANA SAYFA İLE AYNI) - DEĞİŞMEDİ -->
+  <section id="iletisim" class="container">
+    <h2 class="section-title"><span>İletişim</span> ve Konum</h2>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3>Randevu & Danışma</h3>
+        <div class="info-line"><i class="fas fa-phone-alt"></i> 0543 820 72 06</div>
+        <div class="info-line"><i class="fas fa-map-marker-alt"></i> Çankaya Caddesi No:8/1 Kat:1, Ankara</div>
+        <div class="info-line"><i class="fas fa-envelope"></i> bilgi@doktorbetultemel.com</div>
+        <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+          <a href="tel:+905438207206" class="btn-gold"><i class="fas fa-phone"></i> Ara</a>
+          <a href="https://wa.me/905438207206" class="btn-gold btn-outline-gold"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.4936581359434!2d32.85469307088625!3d39.885578427671966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f80f50cb07b%3A0x2cd5285a9e22f52b!2zw4dhbmtheWEsIMOHYW5rYXlhIENkLiBObzo4LCAwNjY5MCDDh2Fua2F5YS9BbmthcmE!5e0!3m2!1str!2str!4v1772530970132!5m2!1str!2str" style="border:0;" allowfullscreen="" loading="lazy" title="Klinik Konumu"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER - ANA SAYFA İLE BİREBİR AYNI (LİNKLER GÜNCELLENDİ) -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-name">Dr. Betül Temel</span>
+        <span class="slogan">Estetik & Kozmetoloji · Ankara</span>
+      </div>
+      
+      <div class="footer-services">
+        <h4>Hizmetlerimiz</h4>
+        <a href="https://www.doktorbetultemel.com/ip-aski">İp Askı</a>
+        <a href="https://www.doktorbetultemel.com/masseter-botoks">Masseter Botoks</a>
+        <a href="https://www.doktorbetultemel.com/altin-igne">Altın İğne</a>
+        <a href="https://www.doktorbetultemel.com/biyolojik-lifting">Biyolojik Lifting</a>
+        <a href="https://www.doktorbetultemel.com/sivi-yuz-germe">Sıvı Yüz Germe</a>
+        <a href="https://www.doktorbetultemel.com/mezoterapi">Mezoterapi</a>
+        <a href="https://www.doktorbetultemel.com/burun-dolgusu">Burun Dolgusu</a>
+        <a href="https://www.doktorbetultemel.com/sac-prp">Saç PRP</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/dr.betultemel/" class="instagram" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/people/Dr-Bet%C3%BCl-TEMEL/61557414041796/" class="facebook" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/905438207206" class="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.doktorbetultemel.com/">Ana Sayfa</a>
+        <a href="https://www.doktorbetultemel.com/#hakkinda">Hakkımda</a>
+        <a href="https://www.doktorbetultemel.com/#islemler">İşlemler</a>
+        <a href="https://www.doktorbetultemel.com/#sss">SSS</a>
+        <a href="https://www.doktorbetultemel.com/#iletisim">İletişim</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Dr. Betül Temel - Tüm hakları saklıdır.
+    </div>
+  </footer>
+
+  <div class="floating-buttons">
+    <a href="https://wa.me/905438207206" class="float-btn whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+905438207206" class="float-btn phone"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <div class="chat-bubble" id="chatBubble">
+    <button class="chat-close" id="chatClose" aria-label="Kapat"><i class="fas fa-times"></i></button>
+    <div class="chat-header">
+      <div class="chat-avatar">
+        <i class="fas fa-user-md"></i>
+      </div>
+      <div class="chat-title">
+        <h4>Dr. Betül Temel</h4>
+        <p><i class="fas fa-circle"></i> Çevrimiçi</p>
+      </div>
+    </div>
+    <div class="chat-message">
+      Doktorumuz şuan randevu için müsait, detaylı bilgi için bize ulaşabilirsiniz.
+    </div>
+    <div class="chat-buttons">
+      <a href="https://wa.me/905438207206" class="chat-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="tel:+905438207206" class="chat-call"><i class="fas fa-phone"></i> Ara</a>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const hamburger = document.getElementById('hamburger');
+      const overlay = document.getElementById('menuOverlay');
+      const mobilePanel = document.getElementById('mobileMenuPanel');
+      const closeBtn = document.getElementById('closeMenu');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-items a');
+      const chatBubble = document.getElementById('chatBubble');
+      const chatClose = document.getElementById('chatClose');
+      
+      let chatDismissed = false;
+
+      function openMenu() {
+        overlay.classList.add('active');
+        mobilePanel.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        overlay.classList.remove('active');
+        mobilePanel.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+
+      if (hamburger) {
+        hamburger.addEventListener('click', (e) => {
+          e.stopPropagation();
+          openMenu();
+        });
+      }
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+      }
+
+      if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+      }
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          if (href) {
+            closeMenu();
+            setTimeout(() => {
+              window.location.href = href;
+            }, 200);
+          }
+        });
+      });
+
+      if (chatClose) {
+        chatClose.addEventListener('click', (e) => {
+          e.stopPropagation();
+          chatBubble.classList.remove('show');
+          chatDismissed = true;
+        });
+      }
+
+      const isMobile = window.innerWidth <= 768;
+      
+      setTimeout(() => {
+        if (!chatDismissed && isMobile) {
+          chatBubble.classList.add('show');
+        }
+      }, 5000);
+
+      window.addEventListener('resize', function() {
+        const currentIsMobile = window.innerWidth <= 768;
+        if (!currentIsMobile && chatBubble.classList.contains('show')) {
+          chatBubble.classList.remove('show');
+        }
+      });
+
+      const accordionItems = document.querySelectorAll('.accordion-item');
+      accordionItems.forEach(item => {
+        item.classList.remove('active');
+        const header = item.querySelector('.accordion-header');
+        if (header) {
+          header.addEventListener('click', () => {
+            item.classList.toggle('active');
+          });
+        }
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const href = this.getAttribute('href');
+          if (href) {
+            window.location.href = href;
+          }
+        });
+      });
+
+      document.querySelectorAll('.footer-links a, .footer-services a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const href = this.getAttribute('href');
+          if (href) {
+            window.location.href = href;
+          }
+        });
+      });
+
+      const revealElements = document.querySelectorAll('.section-title, .about-grid, .features-grid, .steps-container, .faq-grid, .contact-wrapper');
+      revealElements.forEach((el, index) => {
+        el.classList.add('reveal');
+        el.classList.add('reveal-delay-' + ((index % 4) + 1));
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15
+      });
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+      });
+      
+    })();
+  </script>
+</body>
+</html>
