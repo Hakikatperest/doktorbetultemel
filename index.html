@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    /* <-- Tüm CSS stilleri aynen korundu. Uzunluk sorunu olmaması için kısaltılmış gösterim. */
     * {
       margin: 0;
       padding: 0;
@@ -43,6 +42,7 @@
       width: 100%;
     }
 
+    /* container */
     .container {
       width: 100%;
       max-width: 1400px;
@@ -50,6 +50,7 @@
       padding: 4rem 1.5rem;
     }
 
+    /* TİPOGRAFİ */
     h1, h2, h3, h4, .serif-title {
       font-family: 'Playfair Display', serif;
       font-weight: 600;
@@ -73,6 +74,7 @@
       padding-bottom: 4px;
     }
 
+    /* HEADER - YENİ TASARIM (mobil iyileştirildi) */
     header {
       background-color: rgba(253, 249, 246, 0.96);
       backdrop-filter: blur(12px);
@@ -115,6 +117,7 @@
       white-space: nowrap;
     }
 
+    /* ----- YENİ MOBİL MENÜ TASARIMI ----- */
     .nav-links {
       display: flex;
       list-style: none;
@@ -149,6 +152,7 @@
       width: 100%;
     }
 
+    /* Hamburger butonu - daha belirgin */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -177,6 +181,7 @@
       background: rgba(176, 122, 63, 0.15);
     }
 
+    /* Mobil menü arkaplan overlay */
     .menu-overlay {
       display: none;
       position: fixed;
@@ -196,12 +201,13 @@
       opacity: 1;
     }
 
+    /* Mobil menü paneli - aşağıdan yukarıya açılan */
     .mobile-menu-panel {
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
-      background: #fdf3ec;
+      background: #fdf3ec;  /* sıcak krem */
       border-top-left-radius: 40px;
       border-top-right-radius: 40px;
       padding: 2rem 1.5rem 2.5rem;
@@ -280,6 +286,7 @@
       transform: scale(0.97);
     }
 
+    /* Mobil menü altındaki iletişim butonları */
     .mobile-menu-contact {
       display: flex;
       gap: 1rem;
@@ -310,6 +317,7 @@
       border: none;
     }
 
+    /* TÜM BUTONLAR İÇIN ORTAK IŞIK EFEKTI */
     .btn-gold, .float-btn, .chat-buttons a, .mobile-menu-contact a, .card-footer-link, .footer-social a {
       position: relative;
       overflow: hidden;
@@ -337,6 +345,7 @@
       100% { transform: translateX(100%) rotate(25deg); opacity: 0.6; }
     }
 
+    /* BUTONLAR */
     .btn-gold {
       display: inline-flex;
       align-items: center;
@@ -373,6 +382,7 @@
       backdrop-filter: blur(4px);
     }
 
+    /* HERO */
     .hero {
       max-width: 1400px;
       margin: 2rem auto 3rem;
@@ -429,6 +439,7 @@
       object-fit: cover;
     }
 
+    /* istatistik bandı */
     .stats-bar {
       background: var(--beige);
       border-radius: 60px;
@@ -461,6 +472,7 @@
       color: #5f4e42;
     }
 
+    /* HAKKIMDA bölümü */
     .about-grid {
       display: flex;
       flex-wrap: wrap;
@@ -521,6 +533,7 @@
       margin-bottom: 1rem;
     }
 
+    /* SERVİS KARTLARI - TIKLANABİLİR, ARKA PLAN RESİMLİ */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -569,7 +582,7 @@
       box-shadow: 0 25px 35px -12px rgba(106,75,47,0.15);
     }
 
-    /* Her karta özel arka plan resmi - GÖRSELLER AYNI KALDI */
+    /* Her karta özel arka plan resmi */
     .service-card[data-image="biyolojik"]::before { background-image: url('https://www.doktorbetultemel.com/images/biyolojik-lifting.webp'); }
     .service-card[data-image="altin"]::before { background-image: url('https://www.doktorbetultemel.com/images/altin-igne.webp'); }
     .service-card[data-image="sivi"]::before { background-image: url('https://www.doktorbetultemel.com/images/sivi-yuz-germe.webp'); }
@@ -621,6 +634,7 @@
       padding: 0.5rem 1rem;
     }
 
+    /* FAQ grid */
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -674,6 +688,7 @@
       transform: rotate(45deg);
     }
 
+    /* İLETİŞİM */
     .contact-wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -736,6 +751,7 @@
       display: block;
     }
 
+    /* floating butonlar */
     .floating-buttons {
       position: fixed;
       bottom: 20px;
@@ -765,6 +781,7 @@
 
     .float-btn:hover { transform: scale(1.1); }
 
+    /* footer - ÜST MENÜ RENKLERİYLE UYUMLU */
     footer {
       background: rgba(253, 249, 246, 0.98);
       backdrop-filter: blur(12px);
@@ -824,6 +841,7 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
+    /* Sosyal medya ikonları - GERÇEK RENKLER */
     .footer-social a.instagram {
       background: linear-gradient(45deg, #f09433 0%, #d62976 40%, #962fbf 80%, #4f5bd5 100%);
       color: white;
@@ -872,6 +890,7 @@
       margin-right: auto;
     }
 
+    /* SOHBET BALONU (Chat Bubble) - KAPATMA İKONLU */
     .chat-bubble {
       position: fixed;
       bottom: 100px;
@@ -1010,15 +1029,20 @@
       color: white;
     }
 
+    /* ==================== */
+    /* MOBIL DÜZENLEMELER   */
+    /* ==================== */
     @media (max-width: 768px) {
       .navbar {
         padding: 0.75rem 1rem;
       }
 
+      /* masaüstü menüyü gizle */
       .nav-links {
         display: none;
       }
 
+      /* hamburger görünür */
       .hamburger {
         display: flex;
       }
@@ -1112,6 +1136,7 @@
       }
     }
 
+    /* çok küçük ekranlar */
     @media (max-width: 480px) {
       .container {
         padding: 3rem 1rem;
@@ -1147,6 +1172,7 @@
       }
     }
 
+    /* tablet düzen */
     @media (min-width: 769px) and (max-width: 1024px) {
       .nav-links {
         gap: 1.2rem;
@@ -1161,10 +1187,32 @@
       }
     }
 
+    /* genel taşma önleme */
     img, iframe, video, svg {
       max-width: 100%;
       height: auto;
     }
+
+    /* ===== MODERN SCROLL ANIMATION ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      filter: blur(6px);
+      transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: transform, opacity;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    /* Daha yumuşak premium his için gecikmeler */
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
   </style>
 </head>
 <body>
@@ -1258,7 +1306,6 @@
   <section id="islemler" class="container">
     <h2 class="section-title"><span>Estetik</span> İşlemlerimiz</h2>
     <div class="services-grid">
-      <!-- Linkler düzenlendi: her kart kendi sayfasına yönlendiriyor -->
       <a href="https://www.doktorbetultemel.com/biyolojik-lifting" class="service-card" data-image="biyolojik"><div class="service-icon"><i class="fas fa-leaf"></i></div><h3>Biyolojik Lifting</h3><p>Hyaluronik asit, somon DNA ve antioksidanlarla doğal gençleşme.</p><span class="card-footer-link">Bilgi <i class="fas fa-arrow-right"></i></span></a>
       <a href="https://www.doktorbetultemel.com/altin-igne" class="service-card" data-image="altin"><div class="service-icon"><i class="fas fa-bolt"></i></div><h3>Altın İğne</h3><p>Radyofrekans + mikro iğne ile ciltte sıkılaşma ve yenilenme.</p><span class="card-footer-link">Bilgi <i class="fas fa-arrow-right"></i></span></a>
       <a href="https://www.doktorbetultemel.com/sivi-yuz-germe" class="service-card" data-image="sivi"><div class="service-icon"><i class="fas fa-water"></i></div><h3>Sıvı Yüz Germe</h3><p>Cerrahi gerektirmeyen dolgu ile hacim kazandırma.</p><span class="card-footer-link">Bilgi <i class="fas fa-arrow-right"></i></span></a>
@@ -1513,9 +1560,30 @@
         }
       }
 
-      // Servis kartlarına tıklanabilirlik: Linkler zaten doğrudan href'te olduğu için 
-      // ayrıca bir JS müdahalesine gerek yok. Ancak varsayılan davranışı engelleyen eski kod kalmış olabilir.
-      // O kodu siliyoruz. Aşağıdaki blok tamamen kaldırıldı.
+      // ===== SCROLL REVEAL ANIMATION =====
+      const revealElements = document.querySelectorAll(
+        'h1, h2, h3, h4, p, .service-card, .visual-card, .stat-item, .accordion-item, .contact-info, .map-container, .btn-gold'
+      );
+
+      revealElements.forEach((el, index) => {
+        el.classList.add('reveal');
+        el.classList.add('reveal-delay-' + ((index % 4) + 1));
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15
+      });
+
+      document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
+      });
       
     })();
   </script>
