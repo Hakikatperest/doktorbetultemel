@@ -663,7 +663,7 @@
 
     .float-btn:hover { transform: scale(1.1); }
 
-    /* SOHBET BALONU - tam fonksiyonel */
+    /* SOHBET BALONU - sadece mobilde görünür */
     .chat-bubble {
       position: fixed;
       bottom: 90px;
@@ -679,6 +679,13 @@
       transition: opacity 0.3s, transform 0.3s;
       transform: translateY(20px);
       opacity: 0;
+    }
+
+    /* Masaüstünde kesinlikle gizle */
+    @media (min-width: 769px) {
+      .chat-bubble {
+        display: none !important;
+      }
     }
 
     .chat-bubble.show {
@@ -949,7 +956,7 @@
 
       .hero-image-frame {
         border-radius: 28px;
-        aspect-ratio: 4 / 3; /* biraz daha dikey mobilde */
+        aspect-ratio: 4 / 3;
         max-height: 50vh;
       }
 
@@ -1309,7 +1316,7 @@
     <a href="tel:+905438207206" class="float-btn phone"><i class="fas fa-phone"></i></a>
   </div>
 
-  <!-- SOHBET BALONU - KAPATMA İKONLU, tam fonksiyonel -->
+  <!-- SOHBET BALONU - KAPATMA İKONLU, sadece mobilde çalışır -->
   <div class="chat-bubble" id="chatBubble">
     <button class="chat-close" id="chatClose" aria-label="Kapat"><i class="fas fa-times"></i></button>
     <div class="chat-header">
@@ -1391,20 +1398,28 @@
           e.stopPropagation();
           chatBubble.classList.remove('show');
           chatDismissed = true;
-          // Local storage'a kaydederek her sayfa yenilemede çıkmasını engelleyebiliriz (opsiyonel)
-          // localStorage.setItem('chatDismissed', 'true');
         });
       }
 
-      // Sayfa yüklendiğinde sohbet balonunu göster (eğer daha önce kapatılmamışsa)
-      // localStorage kontrolü eklenebilir, ancak şimdilik sadece session bazlı çalışsın
+      // Sohbet balonunu sadece mobilde göster
+      const isMobile = window.innerWidth <= 768;
       
-      // Sohbet balonunu 5 saniye sonra göster (daha hızlı test için 5 saniye)
+      // Sohbet balonunu 5 saniye sonra göster (sadece mobilse)
       setTimeout(() => {
-        if (!chatDismissed) {
+        if (!chatDismissed && isMobile) {
           chatBubble.classList.add('show');
         }
-      }, 5000); // 5 saniye sonra göster
+      }, 5000);
+
+      // Sayfa boyutu değiştiğinde kontrol et (masaüstüne geçerse balonu gizle)
+      window.addEventListener('resize', function() {
+        const currentIsMobile = window.innerWidth <= 768;
+        
+        // Mobil değilse ve balon açıksa gizle
+        if (!currentIsMobile && chatBubble.classList.contains('show')) {
+          chatBubble.classList.remove('show');
+        }
+      });
 
       // accordion (tümü kapalı başlar)
       const accordionItems = document.querySelectorAll('.accordion-item');
