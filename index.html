@@ -720,13 +720,15 @@
 
     .float-btn:hover { transform: scale(1.1); }
 
-    /* footer */
+    /* footer - PREMIUM TASARIM */
     footer {
-      background: var(--dark-brown);
-      color: #f0e0d4;
+      background: linear-gradient(145deg, #2e2a27 0%, #1f1b18 100%);
+      color: #e9dbd2;
       padding: 3rem 1.5rem 2rem;
       margin-top: 4rem;
       width: 100%;
+      border-top-left-radius: 48px;
+      border-top-right-radius: 48px;
     }
 
     .footer-inner {
@@ -734,35 +736,85 @@
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-      gap: 2.5rem;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
     }
 
-    .footer-col {
-      flex: 1 1 200px;
-      min-width: 150px;
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
     }
 
-    .footer-col h4 {
-      margin-bottom: 1rem;
-      font-size: 1.2rem;
+    .footer-brand .logo-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #f0e0d4;
+      line-height: 1.2;
     }
 
-    .footer-col a {
-      color: #f0dccc;
+    .footer-brand .slogan {
+      font-size: 0.9rem;
+      color: #c0b0a4;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(240, 220, 200, 0.1);
+      border-radius: 50%;
+      color: #e9dbd2;
+      font-size: 1.3rem;
+      transition: all 0.2s;
       text-decoration: none;
-      line-height: 2.2;
-      display: inline-block;
-      word-break: break-word;
+      border: 1px solid rgba(176,122,63,0.2);
     }
 
-    .footer-col a:hover { color: white; }
+    .footer-social a:hover {
+      background: var(--golden-brown);
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #e0cfc2;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .footer-links a:hover {
+      color: var(--golden-brown);
+    }
 
     .copyright {
       text-align: center;
       padding-top: 2rem;
-      font-size: 0.9rem;
-      border-top: 1px solid rgba(240,220,200,0.2);
+      font-size: 0.85rem;
+      color: #b09b8e;
+      border-top: 1px solid rgba(240,220,200,0.15);
       margin-top: 2rem;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* ==================== */
@@ -850,6 +902,20 @@
       .accordion-item.active .accordion-content {
         max-height: 300px;
       }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.8rem;
+      }
+
+      .footer-social {
+        justify-content: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
     }
 
     /* çok küçük ekranlar */
@@ -877,22 +943,14 @@
       }
 
       .hero-content .btn-gold {
-        width: auto;
-        min-width: 200px;
-      }
-
-      .about-text .btn-gold {
-        width: auto;
-      }
-
-      .contact-info .btn-gold {
         width: 100%;
-        margin-bottom: 0.5rem;
+        min-width: unset;
       }
 
-      .footer-inner {
+      .footer-links {
         flex-direction: column;
-        gap: 1.5rem;
+        align-items: center;
+        gap: 1rem;
       }
     }
 
@@ -969,9 +1027,9 @@
       <span class="highlight">Kişiye özel · Bilimsel · Kalıcı</span>
       <h2>Güzelliğe Yön Veren Teknoloji</h2>
       <p>Cildinizde fark edilir, kalıcı sonuçlar. Size özel yaklaşım ve ileri düzey tedavi yöntemleri.</p>
+      <!-- SADECE BİR BUTON VAR, GENİŞLETİLDİ, WHATSAPP ve ÜZERİNDE TELEFON NUMARASI YAZIYOR -->
       <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-        <a href="#hakkinda" class="btn-gold"><i class="fas fa-user-md"></i> Hakkımda</a>
-        <a href="https://wa.me/905438207206" class="btn-gold btn-outline-gold"><i class="fab fa-whatsapp"></i> İletişime Geç</a>
+        <a href="https://wa.me/905438207206" class="btn-gold" style="padding: 0.9rem 3rem; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i> 0543 820 72 06</a>
       </div>
 
       <!-- istatistik bandı -->
@@ -1000,10 +1058,7 @@
         <h3>Dr. Betül Temel</h3>
         <p style="font-size:clamp(1rem, 3vw, 1.2rem);">Cumhuriyet Üniversitesi Tıp Fakültesi mezunu (2008). Başhekimlik, il sağlık müdürlüğü ve saha koordinatörlüğü deneyimleriyle sağlıkta liderlik. 2015'ten beri medikal estetik alanında yüzlerce başarılı uygulama.</p>
         <p style="margin:1.5rem 0;">Biyolojik lifting, altın iğne, sıvı yüz germe, botoks ve mezoterapi gibi ileri uygulamaları titizlikle gerçekleştiriyor; ayrıca hekimlere estetik eğitimleri veriyor.</p>
-        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-          <a href="#islemler" class="btn-gold">Daha Fazla</a>
-          <a href="#iletisim" class="btn-gold btn-outline-gold">İletişime Geç</a>
-        </div>
+        <!-- BUTONLAR TAMAMEN KALDIRILDI -->
       </div>
     </div>
   </section>
@@ -1023,11 +1078,11 @@
     </div>
   </section>
 
-  <!-- SSS -->
+  <!-- SSS - 8 SORU, TÜMÜ KAPALI -->
   <section id="sss" class="container">
     <h2 class="section-title"><span>Merak</span> Edilenler</h2>
     <div class="faq-grid">
-      <div class="accordion-item active">
+      <div class="accordion-item">
         <div class="accordion-header"><span>İşlemler acı verir mi?</span> <i class="fas fa-plus-circle"></i></div>
         <div class="accordion-content"><p>Uygulamalar öncesi anestezik kremler sayesinde konforlu bir deneyim sunulur. Hafif bir hassasiyet olabilir.</p></div>
       </div>
@@ -1042,6 +1097,22 @@
       <div class="accordion-item">
         <div class="accordion-header"><span>Kimler botoks yaptırabilir?</span> <i class="fas fa-plus-circle"></i></div>
         <div class="accordion-content"><p>18-65 yaş arası, hamile olmayan ve nörolojik rahatsızlığı bulunmayan herkese uygulanabilir.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>Dolgu ne kadar kalıcı?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>Kullanılan markaya ve bölgeye göre 6-18 ay arası kalıcılık sağlar.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>Altın iğne kimlere uygun?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>Gözenek sorunu, akne izi ve sarkma şikayeti olan her yaştan danışana uygulanabilir.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>Mezoterapi ağrılı mı?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>Çok ince uçlu iğneler kullanılır, hafif batma hissi dışında ağrı olmaz.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header"><span>Randevu nasıl alabilirim?</span> <i class="fas fa-plus-circle"></i></div>
+        <div class="accordion-content"><p>İletişim bölümündeki numaradan bize ulaşarak veya WhatsApp hattımızdan randevu oluşturabilirsiniz.</p></div>
       </div>
     </div>
   </section>
@@ -1066,14 +1137,29 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER - PREMIUM TASARIM -->
   <footer>
     <div class="footer-inner">
-      <div class="footer-col"><h4>Dr. Betül Temel</h4><p>Estetik & Kozmetoloji<br>Ankara</p></div>
-      <div class="footer-col"><h4>Menü</h4><a href="#ana-sayfa">Ana Sayfa</a><br><a href="#hakkinda">Hakkımda</a><br><a href="#islemler">İşlemler</a><br><a href="#sss">SSS</a><br><a href="#iletisim">İletişim</a></div>
-      <div class="footer-col"><h4>Yasal</h4><a href="#">Gizlilik Politikası</a><br><a href="#">KVKK</a></div>
+      <div class="footer-brand">
+        <span class="logo-name">Dr. Betül Temel</span>
+        <span class="slogan">Estetik & Kozmetoloji · Ankara</span>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/905438207206" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="#ana-sayfa">Ana Sayfa</a>
+        <a href="#hakkinda">Hakkımda</a>
+        <a href="#islemler">İşlemler</a>
+        <a href="#sss">SSS</a>
+        <a href="#iletisim">İletişim</a>
+      </div>
     </div>
-    <div class="copyright">© 2025 Dr. Betül Temel - Tüm hakları saklıdır.</div>
+    <div class="copyright">
+      © 2025 Dr. Betül Temel - Tüm hakları saklıdır.
+    </div>
   </footer>
 
   <!-- Floating butonlar -->
@@ -1138,9 +1224,11 @@
         });
       });
 
-      // accordion
+      // accordion (tümü kapalı başlar)
       const accordionItems = document.querySelectorAll('.accordion-item');
       accordionItems.forEach(item => {
+        // aktif class'ını kaldır (varsayılan kapalı)
+        item.classList.remove('active');
         const header = item.querySelector('.accordion-header');
         if (header) {
           header.addEventListener('click', () => {
@@ -1150,7 +1238,7 @@
       });
 
       // smooth scroll masaüstü menü ve footer
-      document.querySelectorAll('.nav-links a, .footer-col a[href^="#"]').forEach(anchor => {
+      document.querySelectorAll('.nav-links a, .footer-links a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           const hash = this.getAttribute('href');
           if (hash && hash.startsWith('#')) {
