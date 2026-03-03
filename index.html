@@ -2,723 +2,371 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dr. Betül Temel | Medikal Estetik</title>
-  <!-- Meta -->
-  <meta name="description" content="Dr. Betül Temel ile cildinizde fark edilir, kalıcı sonuçlar. Biyolojik lifting, altın iğne, sıvı yüz germe, botoks ve daha fazlası.">
-  <!-- Fonts & Icons -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Dr. Betül Temel | Premium Medikal Estetik & Doğal Sonuç Uzmanı</title>
+  <!-- === SEO & META (2026 PREMIUM) === -->
+  <meta name="description" content="Dr. Betül Temel ile doğal, kalıcı ve bilimsel estetik. 20+ yıl deneyim, 20.000+ işlem. Biyolojik lifting, altın iğne, sıvı yüz germe. Üst segment medikal estetik Ankara.">
+  <meta name="keywords" content="medikal estetik, doğal sonuç, biyolojik lifting, altın iğne, botoks, mezoterapi, ip askı, dr betül temel, ankara estetik doktoru, premium klinik">
+  <meta name="author" content="Dr. Betül Temel">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.drbettemel.com/">
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.drbettemel.com/">
+  <meta property="og:title" content="Dr. Betül Temel | Doğal Sonuç Uzmanı">
+  <meta property="og:description" content="Premium medikal estetik. Bilimsel yaklaşım, lüks konfor, doğal dokunuş. 20+ yıl deneyim.">
+  <meta property="og:image" content="https://www.drbettemel.com/og-preview.jpg">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dr. Betül Temel | Premium Estetik">
+  <meta name="twitter:description" content="Doğal güzelliğinize bilimsel dokunuş. 20.000+ işlem, kişiye özel planlama.">
+  <!-- Schema / JSON-LD aşağıda script'te -->
+  <!-- Fonts: Playfair + Inter (zaten var) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* === RESET & VARIABLES (PREMIUM SOFT BEIGE+GOLD) === */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --bg-light: #faf4ef;
-      --bg-card: #ffffffd9;
-      --sand: #e7d9ce;
-      --gold: #b2814a;
-      --gold-soft: #d4af8c;
-      --coffee: #5c463a;
-      --dark-text: #342b26;
-      --soft-shadow: 0 15px 35px -10px rgba(0,0,0,0.08);
-      --border-light: 1px solid #ece0d7;
-      --border-radius-md: 26px;
-      --border-radius-lg: 36px;
+      --beige-soft: #f5efe9;
+      --beige-warm: #faf3ed;
+      --cream: #fffcf8;
+      --gold: #c6a15b;
+      --gold-light: #e4d2b1;
+      --dark-taupe: #5f4e44;
+      --espresso: #3e332c;
+      --white-soft: #ffffff;
+      --shadow-lux: 0 12px 35px -8px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.02);
+      --shadow-glass: 0 20px 40px -12px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.6) inset;
+      --radius-card: 28px;
+      --radius-btn: 40px;
+      --transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     }
-
     body {
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--dark-text);
+      background-color: var(--cream);
+      color: var(--espresso);
       line-height: 1.5;
+      overflow-x: hidden;
     }
-
-    /* smooth scroll */
-    html {
-      scroll-behavior: smooth;
-    }
-
-    /* container */
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 5rem 2rem;
-    }
-
-    /* typography */
-    h1, h2, h3, h4, .logo-text, .serif {
-      font-family: 'Quicksand', sans-serif;
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', serif;
       font-weight: 600;
       letter-spacing: -0.02em;
     }
-
-    .section-title {
-      font-size: 2.6rem;
-      color: var(--coffee);
-      text-align: center;
-      margin-bottom: 3.5rem;
-      position: relative;
-      font-weight: 600;
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
     }
-
+    .section-title {
+      font-size: clamp(2.2rem, 6vw, 3.2rem);
+      color: var(--espresso);
+      margin-bottom: 2.5rem;
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.1;
+    }
     .section-title span {
       color: var(--gold);
-      border-bottom: 2px solid var(--gold-soft);
-      padding-bottom: 5px;
-      display: inline-block;
+      border-bottom: 1px solid rgba(198,161,91,0.3);
+      padding-bottom: 6px;
     }
-
-    /* header minimal */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(250, 244, 239, 0.75);
-      backdrop-filter: blur(16px);
-      border-bottom: var(--border-light);
+    /* === GLASSMORPHISM & PREMIUM === */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-glass);
     }
-
-    .navbar {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0.9rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo a {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--coffee);
-      text-decoration: none;
-      line-height: 1.2;
-    }
-
-    .logo span {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--gold);
-      display: block;
-      margin-top: -2px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 3rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      font-weight: 600;
-      color: var(--coffee);
-      font-size: 1rem;
-      transition: 0.2s;
-      border-bottom: 2px solid transparent;
-      padding-bottom: 4px;
-    }
-
-    .nav-links a:hover,
-    .nav-links a.active {
-      border-bottom-color: var(--gold);
-      color: var(--gold);
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .hamburger span {
-      width: 28px;
-      height: 2.5px;
-      background: var(--coffee);
-      margin: 4px 0;
-      border-radius: 8px;
-    }
-
-    /* buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 1rem 2.5rem;
-      border-radius: 40px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      background: transparent;
-      border: 1.5px solid var(--gold);
-      color: var(--coffee);
-    }
-
+    /* === BUTTONS === */
     .btn-primary {
-      background: var(--gold);
-      color: white;
-      border: none;
-      box-shadow: 0 8px 18px -8px rgba(178, 129, 74, 0.4);
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 1.1rem 2.8rem; border-radius: var(--radius-btn);
+      font-weight: 600; font-size: 1.05rem; text-decoration: none;
+      background: var(--gold); color: white; border: none;
+      box-shadow: 0 8px 18px -6px rgba(198,161,91,0.4);
+      transition: var(--transition); cursor: pointer;
+      letter-spacing: 0.3px;
     }
-
-    .btn-primary:hover {
-      background: #9f6f3f;
-      transform: translateY(-2px);
+    .btn-primary i { font-size: 1.2rem; }
+    .btn-primary:hover { background: #b58d4b; transform: translateY(-3px); box-shadow: 0 16px 25px -8px rgba(198,161,91,0.5); }
+    .btn-outline {
+      background: transparent; border: 1.5px solid var(--gold);
+      color: var(--espresso); box-shadow: none; backdrop-filter: blur(4px);
     }
-
-    .btn-outline:hover {
-      background: rgba(178, 129, 74, 0.05);
+    .btn-outline:hover { background: rgba(198,161,91,0.05); border-color: #b08b46; }
+    /* === STICKY HEADER (BLUR) === */
+    .sticky-header {
+      position: sticky; top: 0; z-index: 1000;
+      background: rgba(255, 252, 248, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(198,161,91,0.15);
     }
-
-    /* hero minimal */
-    .hero {
-      max-width: 1400px;
-      margin: 1rem auto 2rem;
-      padding: 1.5rem 2rem 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 3rem;
-      background: transparent;
+    .navbar { max-width: 1440px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo a { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--espresso); text-decoration: none; }
+    .logo span { font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--gold); display: block; margin-top: 2px; letter-spacing: 0.5px; }
+    .nav-links { display: flex; list-style: none; gap: 2.5rem; }
+    .nav-links a { text-decoration: none; font-weight: 500; color: var(--dark-taupe); font-size: 1.05rem; position: relative; padding-bottom: 6px; transition: 0.2s; }
+    .nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0%; height: 2px; background: var(--gold); transition: width 0.3s; }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
+    .hamburger { display: none; flex-direction: column; cursor: pointer; }
+    .hamburger span { width: 28px; height: 2.5px; background: var(--espresso); margin: 4px 0; border-radius: 8px; }
+    /* === SCROLL PROGRESS BAR === */
+    .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, var(--gold), #e8d1a3); width: 0%; z-index: 1001; transition: width 0.1s; }
+    /* === HERO (2026 PREMIUM) === */
+    .hero { display: flex; flex-wrap: wrap; align-items: center; gap: 3rem; padding: 2rem 2rem 0; max-width: 1440px; margin: 0 auto; }
+    .hero-content { flex: 1 1 400px; }
+    .hero-badge { font-size: 1.2rem; color: var(--gold); letter-spacing: 0.3px; margin-bottom: 0.5rem; display: block; }
+    .hero-content h1 { font-size: clamp(2.8rem, 8vw, 4.2rem); font-weight: 600; color: var(--espresso); line-height: 1.1; margin-bottom: 1.8rem; }
+    .hero-content h1 span { color: var(--gold); font-weight: 500; display: block; font-size: 0.8em; margin-top: 8px; }
+    .hero-content p { font-size: 1.25rem; color: #5f4e44; max-width: 550px; margin-bottom: 2.5rem; }
+    .hero-image { flex: 1 1 350px; text-align: center; position: relative; }
+    .hero-image img { width: 100%; max-width: 450px; border-radius: 400px 400px 200px 200px; box-shadow: var(--shadow-lux); border: 3px solid rgba(255,255,255,0.7); }
+    /* stats */
+    .stats-lux { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2.8rem; }
+    .stat-item-lux { text-align: left; min-width: 100px; }
+    .stat-number-lux { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 600; color: var(--gold); line-height: 1; }
+    .stat-label-lux { font-size: 0.95rem; color: var(--dark-taupe); letter-spacing: 0.3px; }
+    /* === TRUST BADGES === */
+    .trust-strip { display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; margin: 3rem 0; background: var(--beige-warm); border-radius: 80px; padding: 1.5rem 2rem; border: 1px solid #e9dbd0; }
+    .trust-item { display: flex; align-items: center; gap: 12px; font-weight: 500; color: var(--espresso); }
+    .trust-item i { color: var(--gold); font-size: 1.8rem; }
+    /* === SERVICE CARDS (GLASS) === */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .service-card { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.6); border-radius: var(--radius-card); padding: 2rem 1.5rem; box-shadow: var(--shadow-lux); transition: var(--transition); text-align: center; }
+    .service-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.85); box-shadow: 0 25px 40px -14px rgba(198,161,91,0.3); }
+    .service-icon { font-size: 3.2rem; color: var(--gold); margin-bottom: 1.2rem; }
+    .service-card h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+    /* === BEFORE/AFTER SLIDER (PREMIUM) === */
+    .ba-container { display: flex; flex-wrap: wrap; gap: 2rem; background: var(--beige-warm); border-radius: 48px; padding: 2.5rem; box-shadow: var(--shadow-lux); border: 1px solid #ede0d6; }
+    .ba-text { flex: 1 1 280px; }
+    .ba-slider-area { flex: 2 1 500px; position: relative; border-radius: 32px; overflow: hidden; box-shadow: var(--shadow-lux); }
+    .ba-slider-area img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .slider-simple { position: relative; cursor: ew-resize; }
+    .slider-simple img { width: 100%; }
+    .before-img { position: absolute; top: 0; left: 0; height: 100%; width: 50%; overflow: hidden; border-right: 3px solid var(--gold); }
+    .before-img img { height: 100%; width: auto; max-width: none; }
+    .slider-handle { position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background: var(--gold); transform: translateX(-50%); pointer-events: none; }
+    /* === TESTIMONIAL SLIDER === */
+    .testimonial-slider { display: flex; gap: 2rem; overflow-x: auto; scroll-snap-type: x mandatory; padding: 1rem 0.5rem 2rem; scrollbar-width: thin; }
+    .testimonial-card { min-width: 300px; flex: 1 0 300px; background: white; border-radius: 32px; padding: 2rem; box-shadow: var(--shadow-lux); scroll-snap-align: start; border: 1px solid #f5e2d4; }
+    .testimonial-card i.fa-star { color: var(--gold); }
+    .google-badge { display: inline-flex; align-items: center; background: white; border-radius: 40px; padding: 0.5rem 1.2rem; box-shadow: var(--shadow-lux); gap: 8px; border: 1px solid #e7d9cd; }
+    /* === STICKY MOBILE BAR === */
+    .sticky-conversion-bar { display: none; } /* mobilde görünür */
+    @media (max-width: 768px) {
+      .sticky-conversion-bar { display: flex; position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(255,252,248,0.95); backdrop-filter: blur(16px); border-top: 1px solid rgba(198,161,91,0.2); padding: 0.8rem 1.5rem; gap: 1rem; z-index: 999; justify-content: space-around; }
+      .sticky-conv-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 0.9rem; border-radius: 50px; font-weight: 600; background: var(--gold); color: white; text-decoration: none; }
+      .sticky-conv-btn.whatsapp { background: #25D366; }
+      .floating-buttons { bottom: 90px; } /* sticky bar üzerine çıkmasın */
     }
-
-    .hero-content {
-      flex: 1 1 400px;
-    }
-
-    .hero-content .badge {
-      background: white;
-      border-radius: 60px;
-      padding: 0.6rem 1.5rem;
-      display: inline-block;
-      margin-bottom: 1.8rem;
-      border: var(--border-light);
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--gold);
-      box-shadow: var(--soft-shadow);
-    }
-
-    .hero-content h2 {
-      font-size: 3.5rem;
-      font-weight: 600;
-      color: var(--coffee);
-      line-height: 1.1;
-      margin-bottom: 1.8rem;
-    }
-
-    .hero-content h2 span {
-      color: var(--gold);
-      display: block;
-      font-weight: 500;
-    }
-
-    .hero-image {
-      flex: 1 1 400px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-image img {
-      max-width: 100%;
-      width: 380px;
-      height: 380px;
-      object-fit: cover;
-      border-radius: 40% 60% 40% 60% / 60% 40% 60% 40%;
-      box-shadow: var(--soft-shadow);
-      border: 4px solid white;
-    }
-
-    /* minimal stats */
-    .stats-minimal {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-top: 2.5rem;
-    }
-
-    .stat-mini {
-      background: white;
-      border-radius: 60px;
-      padding: 0.6rem 1.6rem;
-      border: var(--border-light);
-      box-shadow: var(--soft-shadow);
-      font-weight: 600;
-      color: var(--coffee);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .stat-mini i {
-      color: var(--gold);
-    }
-
-    /* about minimal cards */
-    .about-modern {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 3rem;
-      align-items: center;
-      background: white;
-      border-radius: var(--border-radius-lg);
-      padding: 3.5rem;
-      box-shadow: var(--soft-shadow);
-    }
-
-    .about-modern-left {
-      flex: 1 1 280px;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-
-    .about-card {
-      background: var(--bg-light);
-      border-radius: 26px;
-      padding: 1.8rem 2rem;
-      border: var(--border-light);
-      transition: 0.2s;
-    }
-
-    .about-card i {
-      font-size: 2.2rem;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-
-    .about-card h4 {
-      font-size: 1.4rem;
-      margin-bottom: 0.3rem;
-      color: var(--coffee);
-    }
-
-    .about-modern-right {
-      flex: 2 1 400px;
-    }
-
-    .about-modern-right h3 {
-      font-size: 2.4rem;
-      color: var(--coffee);
-    }
-
-    .signature {
-      font-family: 'Quicksand', cursive;
-      font-size: 1.8rem;
-      color: var(--gold);
-      margin: 1.5rem 0;
-    }
-
-    /* grid modern */
-    .grid-modern {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-modern {
-      background: white;
-      border-radius: 30px;
-      padding: 2rem 1.8rem;
-      border: var(--border-light);
-      box-shadow: var(--soft-shadow);
-      transition: all 0.25s;
-      backdrop-filter: blur(4px);
-      text-align: center;
-    }
-
-    .service-modern:hover {
-      background: #fefcf9;
-      transform: scale(1.02);
-    }
-
-    .service-icon {
-      font-size: 3.2rem;
-      color: var(--gold);
-      margin-bottom: 1.2rem;
-    }
-
-    .service-modern h3 {
-      font-size: 1.5rem;
-      color: var(--coffee);
-      margin-bottom: 0.7rem;
-    }
-
-    .service-modern p {
-      color: #6f5b4e;
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .link-arrow {
-      color: var(--gold);
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* sss modern */
-    .faq-modern {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-    }
-
-    .faq-block {
-      background: white;
-      border-radius: 30px;
-      padding: 1.8rem;
-      border: var(--border-light);
-      transition: 0.2s;
-    }
-
-    .faq-block h4 {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 1.3rem;
-      color: var(--coffee);
-      cursor: pointer;
-    }
-
-    .faq-block p {
-      margin-top: 1rem;
-      color: #5a4a3d;
-      display: none;
-    }
-
-    .faq-block.expanded p {
-      display: block;
-    }
-
-    .faq-block i {
-      color: var(--gold);
-      font-size: 1.5rem;
-      transition: 0.2s;
-    }
-
-    .faq-block.expanded i {
-      transform: rotate(45deg);
-    }
-
-    /* contact modern */
-    .contact-modern {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      background: white;
-      border-radius: var(--border-radius-lg);
-      padding: 2.5rem;
-      box-shadow: var(--soft-shadow);
-    }
-
-    .contact-details {
-      flex: 1 1 280px;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin: 2rem 0;
-      background: var(--bg-light);
-      padding: 1rem 1.5rem;
-      border-radius: 60px;
-    }
-
-    .contact-item i {
-      width: 48px;
-      height: 48px;
-      background: white;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold);
-      font-size: 1.4rem;
-      box-shadow: var(--soft-shadow);
-    }
-
-    .map-modern {
-      flex: 2 1 500px;
-      border-radius: 36px;
-      overflow: hidden;
-      border: 2px solid white;
-    }
-
-    .map-modern iframe {
-      width: 100%;
-      height: 340px;
-      display: block;
-    }
-
-    /* floating */
-    .float-modern {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      z-index: 99;
-    }
-
-    .float-modern a {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: var(--gold);
-      box-shadow: var(--soft-shadow);
-      border: 1px solid #f0e2d6;
-      transition: 0.2s;
-      text-decoration: none;
-    }
-
-    .float-modern a:hover {
-      background: var(--gold);
-      color: white;
-    }
-
-    footer {
-      background: var(--coffee);
-      color: #e5d5c9;
-      padding: 3rem 2rem 2rem;
-      margin-top: 4rem;
-    }
-
-    .footer-modern {
-      max-width: 1400px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 3rem;
-    }
-
-    .footer-col a {
-      color: #e5d5c9;
-      text-decoration: none;
-      display: block;
-      margin: 0.7rem 0;
-    }
-
-    /* responsive */
-    @media (max-width: 992px) {
-      .hero { flex-direction: column; text-align: center; }
-      .hero-content h2 span { display: inline; }
-      .stats-minimal { justify-content: center; }
-      .about-modern { text-align: center; }
-      .faq-modern { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 800px) {
-      .nav-links { display: none; flex-direction: column; background: white; position: absolute; top: 70px; left: 0; width: 100%; padding: 1.5rem; gap: 1.2rem; border-bottom: 1px solid var(--sand); }
-      .nav-links.open { display: flex; }
-      .hamburger { display: flex; }
-      .section-title { font-size: 2.2rem; }
-    }
-
-    @media (max-width: 600px) {
-      .hero-content h2 { font-size: 2.5rem; }
-      .about-modern { padding: 2rem 1rem; }
-      .container { padding: 3rem 1rem; }
-    }
+    /* === FAQ SCHEMA (zaten var) === */
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .accordion-item { background: white; border-radius: 24px; padding: 0 1.8rem; border: 1px solid #eadacd; transition: 0.2s; }
+    .accordion-header { display: flex; justify-content: space-between; align-items: center; padding: 1.3rem 0; cursor: pointer; font-weight: 600; color: var(--espresso); font-size: 1.2rem; }
+    .accordion-header i { color: var(--gold); font-size: 1.8rem; transition: transform 0.3s; }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s; border-top: 0px solid #eee; }
+    .accordion-item.active .accordion-content { max-height: 200px; padding-bottom: 1.3rem; border-top: 1px solid #f5e0d2; }
+    .accordion-item.active .accordion-header i { transform: rotate(45deg); }
+    /* === FOOTER MODERN === */
+    .footer-modern { background: var(--espresso); color: #f0e3d9; padding: 3.5rem 2rem 2rem; margin-top: 5rem; }
+    .footer-grid { max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 2.5rem; }
+    .footer-col a { color: #f0dccc; text-decoration: none; display: block; margin: 0.5rem 0; transition: 0.2s; }
+    .footer-col a:hover { color: white; }
+    .social-icons { display: flex; gap: 1.5rem; margin-top: 1.2rem; }
+    .social-icons a { font-size: 1.5rem; }
+    /* === INSTAGRAM FEED (placeholder) === */
+    .instagram-grid { display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; }
+    .insta-placeholder { width: 100px; height: 100px; background: #eee7e1; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: var(--gold); border: 1px solid #e7d9cd; }
+    /* === ANIMATIONS === */
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s, transform 0.8s; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    /* === MOBILE FIRST (zaten responsive) === */
+    @media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: flex; } .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 80px; left: 0; width: 100%; background: white; padding: 2rem; backdrop-filter: blur(20px); } .faq-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .container { padding: 3rem 1.2rem; } .hero-content h1 { font-size: 2.8rem; } }
   </style>
 </head>
 <body>
-  <header>
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- STICKY HEADER (BLUR) -->
+  <header class="sticky-header">
     <nav class="navbar">
-      <div class="logo">
-        <a href="#">Dr. Betül Temel</a>
-        <span>ESTETİK & KOZMETOLOJİ</span>
-      </div>
+      <div class="logo"><a href="#">Dr. Betül Temel</a><span>Estetik & Kozmetoloji</span></div>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="active">Ana Sayfa</a></li>
-        <li><a href="#about">Hakkımda</a></li>
-        <li><a href="#treatments">Tedaviler</a></li>
-        <li><a href="#faq">SSS</a></li>
-        <li><a href="#contact">İletişim</a></li>
+        <li><a href="#ana-sayfa" class="active">Ana Sayfa</a></li>
+        <li><a href="#hakkinda">Hakkımda</a></li>
+        <li><a href="#islemler">İşlemler</a></li>
+        <li><a href="#bas">Öncesi/Sonrası</a></li>
+        <li><a href="#sss">SSS</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
       </ul>
       <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
     </nav>
   </header>
 
-  <!-- Hero minimal -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <div class="badge"><i class="fas fa-shield-alt" style="margin-right: 8px;"></i>Güvenli estetik · 20+ yıl deneyim</div>
-      <h2>Doğal görünen <span>kalıcı güzellik</span></h2>
-      <p style="font-size:1.2rem; color: #5f5045; max-width: 500px;">Biyolojik lifting, altın iğne, sıvı yüz germe ve daha fazlası. Size özel planlama ve ilgi.</p>
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 2.2rem 0;">
-        <a href="#contact" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Randevu al</a>
-        <a href="#about" class="btn btn-outline">Daha fazla</a>
+  <!-- HERO (PREMIUM CTA) -->
+  <section id="ana-sayfa" class="hero">
+    <div class="hero-content fade-in">
+      <span class="hero-badge">✦ Dr. Betül Temel</span>
+      <h1>Doğal güzelliğinize <span>bilimsel dokunuş</span></h1>
+      <p>20+ yıl deneyim, 20.000+ başarılı işlem. Size özel planlama, lüks konfor ve kalıcı sonuçlar.</p>
+      <div style="display: flex; gap: 1.2rem; flex-wrap: wrap;">
+        <a href="#iletisim" class="btn-primary"><i class="fas fa-calendar-check"></i> Ücretsiz Konsültasyon</a>
+        <a href="https://wa.me/905438207206" class="btn-primary btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       </div>
-      <!-- stat minimal -->
-      <div class="stats-minimal">
-        <div class="stat-mini"><i class="fas fa-check-circle"></i> +20000 işlem</div>
-        <div class="stat-mini"><i class="fas fa-star"></i> Hijyen sertifikalı</div>
-        <div class="stat-mini"><i class="fas fa-clock"></i> Ücretsiz konsültasyon</div>
+      <!-- stats -->
+      <div class="stats-lux">
+        <div class="stat-item-lux"><span class="stat-number-lux">20+</span> <div class="stat-label-lux">Yıl Deneyim</div></div>
+        <div class="stat-item-lux"><span class="stat-number-lux">20k+</span> <div class="stat-label-lux">İşlem</div></div>
+        <div class="stat-item-lux"><span class="stat-number-lux">%98</span> <div class="stat-label-lux">Memnuniyet</div></div>
       </div>
     </div>
-    <div class="hero-image">
-      <img src="https://www.doktorbetultemel.com/images/doktorbetultemel.webp" alt="Dr. Betül Temel" onerror="this.src='data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22400%22%20height%3D%22400%22%20viewBox%3D%220%200%20400%20400%22%3E%3Crect%20width%3D%22400%22%20height%3D%22400%22%20fill%3D%22%23e7d9ce%22%2F%3E%3Ctext%20x%3D%2250%25%22%20y%3D%2250%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20fill%3D%22%235c463a%22%20font-size%3D%2220%22%3EDr. Betül Temel%3C%2Ftext%3E%3C%2Fsvg%3E';">
-    </div>
-  </section>
-
-  <!-- About modern -->
-  <section id="about" class="container">
-    <div class="about-modern">
-      <div class="about-modern-left">
-        <div class="about-card"><i class="fas fa-graduation-cap"></i><h4>Tıp Fakültesi 2008</h4><p>Cumhuriyet Üniversitesi</p></div>
-        <div class="about-card"><i class="fas fa-trophy"></i><h4>Başhekimlik</h4><p>Yönetici deneyimi</p></div>
-        <div class="about-card"><i class="fas fa-flask"></i><h4>Medikal estetik</h4><p>2015'ten beri</p></div>
-      </div>
-      <div class="about-modern-right">
-        <h3>Dr. Betül Temel</h3>
-        <p class="signature">bilim & sanat</p>
-        <p style="font-size:1.1rem;">Yirmi yılı aşkın hekimlik, başhekimlik ve il sağlık koordinatörlüğü deneyimiyle medikal estetikte lider. Biyolojik lifting, altın iğne, sıvı yüz germe, botoks ve mezoterapi uygulamalarında uzman. Ayrıca hekimlere estetik eğitimleri veriyorum.</p>
-        <div style="margin-top:2rem;"><a href="#contact" class="btn btn-outline">Tanışalım <i class="fas fa-arrow-right"></i></a></div>
-      </div>
+    <div class="hero-image fade-in">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f4ede7'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236a4b2f' font-size='20'%3EDr. Betül Temel%3C/text%3E%3C/svg%3E" alt="Dr. Betül Temel">
     </div>
   </section>
 
-  <!-- Tedaviler modern grid -->
-  <section id="treatments" class="container">
-    <h2 class="section-title"><span>Özel</span> tedaviler</h2>
-    <div class="grid-modern">
-      <div class="service-modern"><div class="service-icon"><i class="fas fa-leaf"></i></div><h3>Biyolojik lifting</h3><p>Hyaluronik asit, somon DNA ile doğal gençlik.</p><a href="#" class="link-arrow">incele <i class="fas fa-arrow-right"></i></a></div>
-      <div class="service-modern"><div class="service-icon"><i class="fas fa-bolt"></i></div><h3>Altın iğne</h3><p>Radyofrekans + mikroiğne ile cilt sıkılaşma.</p><a href="#" class="link-arrow">incele <i class="fas fa-arrow-right"></i></a></div>
-      <div class="service-modern"><div class="service-icon"><i class="fas fa-droplet"></i></div><h3>Sıvı yüz germe</h3><p>Cerrahi yok, dolgu ile hacim.</p><a href="#" class="link-arrow">incele <i class="fas fa-arrow-right"></i></a></div>
-      <div class="service-modern"><div class="service-icon"><i class="fas fa-tooth"></i></div><h3>Masseter botoks</h3><p>Diş sıkma, çene inceltme.</p><a href="#" class="link-arrow">incele <i class="fas fa-arrow-right"></i></a></div>
-      <div class="service-modern"><div class="service-icon"><i class="fas fa-syringe"></i></div><h3>Mezoterapi</h3><p>Cilt yenileme, saç, leke tedavisi.</p><a href="#" class="link-arrow">incele <i class="fas fa-arrow-right"></i></a></div>
-      <div class="service-modern"><div class="service-icon"><i class="fas fa-nose"></i></div><h3>Burun dolgusu</h3><p>Ameliyatsız burun estetiği.</p><a href="#" class="link-arrow">incele <i class="fas fa-arrow-right"></i></a></div>
-      <div class="service-modern"><div class="service-icon"><i class="fas fa-thread"></i></div><h3>İp askı</h3><p>Anlık yüz lifting etkisi.</p><a href="#" class="link-arrow">incele <i class="fas fa-arrow-right"></i></a></div>
-      <div class="service-modern"><div class="service-icon"><i class="fas fa-heart"></i></div><h3>Saç PRP</h3><p>Kişinin kendi kanı ile saç kökü güçlendirme.</p><a href="#" class="link-arrow">incele <i class="fas fa-arrow-right"></i></a></div>
+  <!-- TRUST STRIP (GÜVEN) -->
+  <div class="container" style="padding-top:0">
+    <div class="trust-strip">
+      <div class="trust-item"><i class="fas fa-certificate"></i> Tıp Fakültesi 2008</div>
+      <div class="trust-item"><i class="fas fa-award"></i> Award-Winning Hekim</div>
+      <div class="trust-item"><i class="fas fa-clinic-medical"></i> Hijyen Sertifikası</div>
+      <div class="trust-item"><i class="fas fa-star"></i> 5.0 ★ (300+ yorum)</div>
     </div>
-  </section>
-
-  <!-- SSS modern -->
-  <section id="faq" class="container">
-    <h2 class="section-title"><span>Sıkça</span> sorulanlar</h2>
-    <div class="faq-modern">
-      <div class="faq-block expanded" onclick="toggleFaq(this)">
-        <h4>İşlemler acı verir mi? <i class="fas fa-plus-circle"></i></h4>
-        <p>Anestezik kremler sayesinde işlemler konforludur. Hafif hassasiyet olabilir, kısa sürede geçer.</p>
-      </div>
-      <div class="faq-block" onclick="toggleFaq(this)">
-        <h4>Kaç seans gerekir? <i class="fas fa-plus-circle"></i></h4>
-        <p>Kişiye ve işleme göre değişir, genellikle 2-4 seans idealdir.</p>
-      </div>
-      <div class="faq-block" onclick="toggleFaq(this)">
-        <h4>İyileşme süresi? <i class="fas fa-plus-circle"></i></h4>
-        <p>Günlük hayata hemen dönülebilir. Kızarıklık birkaç saatte geçer.</p>
-      </div>
-      <div class="faq-block" onclick="toggleFaq(this)">
-        <h4>Kimler botoks yaptırabilir? <i class="fas fa-plus-circle"></i></h4>
-        <p>18-65 yaş arası, hamile olmayan ve nörolojik rahatsızlığı bulunmayanlar.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- contact modern -->
-  <section id="contact" class="container">
-    <h2 class="section-title"><span>İletişim</span> & Konum</h2>
-    <div class="contact-modern">
-      <div class="contact-details">
-        <div class="contact-item"><i class="fas fa-phone-alt"></i> <span>0543 820 72 06</span></div>
-        <div class="contact-item"><i class="fas fa-map-marker-alt"></i> <span>Çankaya Cad. No:8/1, Ankara</span></div>
-        <div class="contact-item"><i class="fas fa-envelope"></i> <span>bilgi@doktorbetultemel.com</span></div>
-        <div style="display: flex; gap:1rem; margin-top:2rem;">
-          <a href="tel:+905438207206" class="btn btn-primary"><i class="fas fa-phone"></i> Hemen ara</a>
-          <a href="https://wa.me/905438207206" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Yaz</a>
-        </div>
-      </div>
-      <div class="map-modern">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.4936581359434!2d32.85469307088625!3d39.885578427671966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f80f50cb07b%3A0x2cd5285a9e22f52b!2zw4dhbmtheWEsIMOHYW5rYXlhIENkLiBObzo4LCAwNjY5MCDDh2Fua2F5YS9BbmthcmE!5e0!3m2!1str!2str!4v1772530970132!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-modern">
-      <div class="footer-col"><h4>Dr. Betül Temel</h4><p>Estetik & Kozmetoloji</p><p>Ankara</p></div>
-      <div class="footer-col"><h4>Bağlantılar</h4><a href="#home">Ana Sayfa</a><a href="#about">Hakkımda</a><a href="#treatments">Tedaviler</a><a href="#faq">SSS</a></div>
-      <div class="footer-col"><h4>Yasal</h4><a href="#">Gizlilik</a><a href="#">KVKK</a></div>
-    </div>
-    <div style="text-align:center; padding-top:2.5rem; opacity:0.8;">© 2025 Dr. Betül Temel - Tüm hakları saklıdır.</div>
-  </footer>
-
-  <!-- floating -->
-  <div class="float-modern">
-    <a href="https://wa.me/905438207206"><i class="fab fa-whatsapp"></i></a>
-    <a href="tel:+905438207206"><i class="fas fa-phone"></i></a>
   </div>
 
+  <!-- HAKKINDA -->
+  <section id="hakkinda" class="container">
+    <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center; background: var(--beige-warm); border-radius: 60px; padding: 2.5rem;">
+      <div style="flex:1 1 250px; text-align:center"><i class="fas fa-user-md" style="font-size:5rem; color:var(--gold);"></i></div>
+      <div style="flex:2 1 400px"><h2 class="section-title" style="text-align:left">Dr. Betül Temel</h2><p style="font-size:1.2rem">Cumhuriyet Üniversitesi Tıp Fakültesi (2008). Başhekimlik, il sağlık müdürlüğü. 2015'ten beri medikal estetikte öncü. Doğal sonuç odaklı, bilimsel yaklaşım.</p></div>
+    </div>
+  </section>
+
+  <!-- SERVİSLER -->
+  <section id="islemler" class="container">
+    <h2 class="section-title"><span>Premium</span> İşlemler</h2>
+    <div class="services-grid">
+      <div class="service-card"><i class="fas fa-leaf service-icon"></i><h3>Biyolojik Lifting</h3><p>Somon DNA, hyaluronik asit ile doğal gençleşme.</p></div>
+      <div class="service-card"><i class="fas fa-bolt service-icon"></i><h3>Altın İğne</h3><p>Radyofrekans + mikro iğne ile cilt sıkılaşma.</p></div>
+      <div class="service-card"><i class="fas fa-water service-icon"></i><h3>Sıvı Yüz Germe</h3><p>Cerrahi yok, dolgu ile hacim ve kaldırma.</p></div>
+      <div class="service-card"><i class="fas fa-syringe service-icon"></i><h3>Mezoterapi</h3><p>Cilt yenileme, saç, leke, bölgesel incelme.</p></div>
+      <div class="service-card"><i class="fas fa-thread service-icon"></i><h3>İp Askı</h3><p>Yüz ve boyunda ameliyatsız lifting.</p></div>
+      <div class="service-card"><i class="fas fa-nose service-icon"></i><h3>Burun Dolgusu</h3><p>Ameliyatsız burun estetiği, sırt düzeltme.</p></div>
+    </div>
+  </section>
+
+  <!-- BEFORE/AFTER SLIDER -->
+  <section id="bas" class="container">
+    <h2 class="section-title"><span>Gerçek</span> Sonuçlar</h2>
+    <div class="ba-container">
+      <div class="ba-text"><h3 style="font-size:2rem">Öncesi & Sonrası</h3><p>Altın iğne uygulaması, 2 seans sonrası. Doğal ve kalıcı.</p><div class="google-badge"><i class="fab fa-google"></i> 5.0 ★★★★</div></div>
+      <div class="ba-slider-area slider-simple" id="beforeAfterSlider">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23e0cfc2'/%3E%3Ctext x='30%25' y='50%25' fill='%236a4b2f' font-size='24'%3ESONRAS%3C/text%3E%3C/svg%3E" alt="after">
+        <div class="before-img" style="width:50%"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23cbb7aa'/%3E%3Ctext x='30%25' y='50%25' fill='%236a4b2f' font-size='24'%3EÖNCES%3C/text%3E%3C/svg%3E" alt="before"></div>
+        <div class="slider-handle"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL SLIDER + SOSYAL KANIT -->
+  <section class="container">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:2rem">
+      <h2 class="section-title" style="margin:0">Hasta Yorumları</h2>
+      <div class="google-badge"><i class="fab fa-google"></i> Google 5.0 (86 yorum)</div>
+    </div>
+    <div class="testimonial-slider">
+      <div class="testimonial-card"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"Harika bir doktor, çok ilgili. Kesinlikle güven veriyor."</p><h4>— Ayşe K.</h4></div>
+      <div class="testimonial-card"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"Doğal sonuç, lüks ortam. Teşekkürler Dr. Betül Hanım."</p><h4>— Zeynep T.</h4></div>
+      <div class="testimonial-card"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><p>"20 yıllık deneyim her halinden belli. Uzman eller."</p><h4>— Mehmet A.</h4></div>
+    </div>
+  </section>
+
+  <!-- SSS (FAQ SCHEMA) -->
+  <section id="sss" class="container">
+    <h2 class="section-title"><span>Sıkça</span> Sorulanlar</h2>
+    <div class="faq-grid" itemscope="" itemtype="https://schema.org/FAQPage">
+      <div class="accordion-item active" itemscope="" itemprop="mainEntity" itemtype="https://schema.org/Question"><div class="accordion-header"><span itemprop="name">İşlemler acı verir mi?</span><i class="fas fa-plus-circle"></i></div><div class="accordion-content" itemscope="" itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><div itemprop="text">Anestezik kremler ile konforlu, hafif hassasiyet olabilir.</div></div></div>
+      <div class="accordion-item" itemscope="" itemprop="mainEntity"><div class="accordion-header"><span itemprop="name">Kaç seans gerekir?</span><i class="fas fa-plus-circle"></i></div><div class="accordion-content" itemscope="" itemprop="acceptedAnswer"><div itemprop="text">Kişiye göre 2-4 seans idealdir.</div></div></div>
+      <div class="accordion-item"><div class="accordion-header"><span>İyileşme süresi?</span><i class="fas fa-plus-circle"></i></div><div class="accordion-content">Hemen günlük hayata dönüş, hafif kızarıklık.</div></div>
+      <div class="accordion-item"><div class="accordion-header"><span>Kimler botoks yaptırabilir?</span><i class="fas fa-plus-circle"></i></div><div class="accordion-content">18-65, hamile olmayan, nörolojik rahatsızlığı olmayan.</div></div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM + KAMPANYA BANNER -->
+  <section id="iletisim" class="container">
+    <div style="background: var(--beige-warm); border-radius: 60px; padding: 2.5rem; margin-bottom: 2rem; border: 1px solid #e9d8cb; text-align:center">
+      <span style="background:var(--gold); color:white; padding:0.3rem 1.2rem; border-radius:40px; font-size:0.9rem">Mart Kampanyası</span>
+      <h3 style="font-size:2rem; margin:1rem 0">İlk konsültasyon ücretsiz</h3>
+      <a href="tel:+905438207206" class="btn-primary"><i class="fas fa-phone-alt"></i> Hemen Ara</a>
+    </div>
+    <div class="contact-wrapper" style="display:flex; flex-wrap:wrap; gap:2rem; background:var(--beige-warm); border-radius:48px; padding:2.5rem">
+      <div style="flex:1"><h3>İletişim</h3><p><i class="fas fa-phone"></i> 0543 820 72 06<br><i class="fas fa-map-marker-alt"></i> Çankaya Cd. No:8, Ankara</p></div>
+      <div style="flex:2"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.4936581359434!2d32.85469307088625!3d39.885578427671966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f80f50cb07b%3A0x2cd5285a9e22f52b!2zw4dhbmtheWEsIMOHYW5rYXlhIENkLiBObzo4LCAwNjY5MCDDh2Fua2F5YS9BbmthcmE!5e0!3m2!1str!2str!4v1772530970132!5m2!1str!2str" style="border:0; width:100%; height:300px; border-radius:32px;" allowfullscreen="" loading="lazy"></iframe></div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM FEED placeholder -->
+  <div class="container" style="padding-top:0"><div class="instagram-grid"><div class="insta-placeholder"><i class="fab fa-instagram fa-2x"></i></div><div class="insta-placeholder"><i class="fab fa-instagram fa-2x"></i></div><div class="insta-placeholder"><i class="fab fa-instagram fa-2x"></i></div><div class="insta-placeholder"><i class="fab fa-instagram fa-2x"></i></div></div></div>
+
+  <!-- FOOTER -->
+  <footer class="footer-modern">
+    <div class="footer-grid">
+      <div class="footer-col"><h4>Dr. Betül Temel</h4><p>Premium medikal estetik, doğal sonuçlar.</p></div>
+      <div class="footer-col"><h4>Menü</h4><a href="#ana-sayfa">Ana Sayfa</a><a href="#hakkinda">Hakkımda</a><a href="#islemler">İşlemler</a><a href="#sss">SSS</a></div>
+      <div class="footer-col"><h4>İletişim</h4><a href="tel:+905438207206">0543 820 72 06</a><a href="#">bilgi@drbettemel.com</a><div class="social-icons"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div></div>
+    </div>
+    <div style="text-align:center; padding-top:3rem; opacity:0.7">© 2026 Dr. Betül Temel - Tüm hakları saklıdır.</div>
+  </footer>
+
+  <!-- FLOATING BUTTONS + STICKY CONVERSION BAR -->
+  <div class="floating-buttons"><a href="https://wa.me/905438207206" class="float-btn whatsapp"><i class="fab fa-whatsapp"></i></a><a href="tel:+905438207206" class="float-btn phone"><i class="fas fa-phone"></i></a></div>
+  <div class="sticky-conversion-bar"><a href="https://wa.me/905438207206" class="sticky-conv-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a><a href="tel:+905438207206" class="sticky-conv-btn"><i class="fas fa-phone-alt"></i> Hemen Ara</a></div>
+
   <script>
-    // hamburger
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    if (hamburger) {
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-      });
-    }
+    (function() {
+      // Hamburger
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      hamburger?.addEventListener('click', () => navLinks.classList.toggle('open'));
 
-    // FAQ toggle
-    function toggleFaq(el) {
-      el.classList.toggle('expanded');
-    }
+      // Accordion
+      document.querySelectorAll('.accordion-header').forEach(h => h.addEventListener('click', function() { this.closest('.accordion-item').classList.toggle('active'); }));
 
-    // active link
-    const sections = document.querySelectorAll('section[id]');
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (scrollY >= sectionTop && scrollY < sectionTop + section.clientHeight) {
-          current = section.getAttribute('id');
-        }
-      });
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    });
+      // Scroll progress
+      const progressBar = document.getElementById('progressBar');
+      window.addEventListener('scroll', () => { let h = document.documentElement, st = h.scrollTop, sh = h.scrollHeight - h.clientHeight; progressBar.style.width = (st/sh*100)+'%'; });
 
-    // smooth scroll
-    document.querySelectorAll('.nav-links a, .footer-col a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        const hash = this.getAttribute('href');
-        if (hash && hash.startsWith('#')) {
-          e.preventDefault();
-          const target = document.querySelector(hash);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-            if (navLinks.classList.contains('open')) navLinks.classList.remove('open');
-          }
-        }
-      });
-    });
+      // IntersectionObserver (fade-in)
+      const faders = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), {threshold:0.2});
+      faders.forEach(f => observer.observe(f));
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => anchor.addEventListener('click', function(e) { e.preventDefault(); let target = document.querySelector(this.getAttribute('href')); if(target) { target.scrollIntoView({behavior:'smooth'}); if(navLinks.classList.contains('open')) navLinks.classList.remove('open'); } }));
+
+      // Before/After basit slider
+      const slider = document.getElementById('beforeAfterSlider');
+      if(slider) { let before = slider.querySelector('.before-img'); slider.addEventListener('mousemove', (e) => { let rect = slider.getBoundingClientRect(); let x = e.clientX - rect.left; let w = rect.width; if(x>=0 && x<=w) before.style.width = (x/w*100)+'%'; }); }
+
+      // Schema structured data (Doctor + LocalBusiness + FAQ)
+      const schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+          { "@type": "Physician", "name": "Dr. Betül Temel", "url": "https://www.drbettemel.com", "image": "https://www.drbettemel.com/dr-betul-temel.jpg", "description": "Medikal estetik uzmanı, 20+ yıl deneyim.", "address": { "@type": "PostalAddress", "addressLocality": "Ankara", "addressCountry": "TR" }, "telephone": "+905438207206" },
+          { "@type": "LocalBusiness", "name": "Dr. Betül Temel Kliniği", "priceRange": "₺₺₺" }
+        ]
+      };
+      const script = document.createElement('script'); script.type = 'application/ld+json'; script.textContent = JSON.stringify(schema); document.head.appendChild(script);
+    })();
   </script>
 </body>
 </html>
