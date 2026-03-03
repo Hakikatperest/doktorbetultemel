@@ -82,7 +82,7 @@
       box-shadow: var(--soft-shadow);
     }
 
-    /* HEADER */
+    /* HEADER - YENİ TASARIM (mobil iyileştirildi) */
     header {
       background-color: rgba(253, 249, 246, 0.96);
       backdrop-filter: blur(12px);
@@ -125,6 +125,7 @@
       white-space: nowrap;
     }
 
+    /* ----- YENİ MOBİL MENÜ TASARIMI ----- */
     .nav-links {
       display: flex;
       list-style: none;
@@ -159,20 +160,169 @@
       width: 100%;
     }
 
+    /* Hamburger butonu - daha belirgin */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
-      padding: 8px;
+      padding: 10px;
+      background: rgba(176, 122, 63, 0.08);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      justify-content: center;
+      align-items: center;
+      transition: background 0.2s;
+      z-index: 1002;
     }
 
     .hamburger span {
-      width: 26px;
+      width: 24px;
       height: 2.5px;
       background: var(--dark-brown);
       margin: 3px 0;
       border-radius: 8px;
       transition: 0.3s;
+    }
+
+    .hamburger:hover {
+      background: rgba(176, 122, 63, 0.15);
+    }
+
+    /* Mobil menü arkaplan overlay */
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(5px);
+      z-index: 1001;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .menu-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* Mobil menü paneli - aşağıdan yukarıya açılan */
+    .mobile-menu-panel {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fdf3ec;  /* sıcak krem */
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      padding: 2rem 1.5rem 2.5rem;
+      box-shadow: 0 -10px 40px rgba(106, 75, 47, 0.15);
+      z-index: 1002;
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.1, 1);
+      border-top: 2px solid rgba(176,122,63,0.2);
+    }
+
+    .mobile-menu-panel.show {
+      transform: translateY(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #e9cfc0;
+    }
+
+    .mobile-menu-header .menu-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--dark-brown);
+    }
+
+    .close-menu {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var(--golden-brown);
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.2s;
+    }
+
+    .close-menu:hover {
+      background: rgba(176,122,63,0.1);
+    }
+
+    .mobile-nav-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-nav-items a {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--dark-brown);
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 60px;
+      transition: all 0.2s;
+      display: block;
+      text-align: center;
+      letter-spacing: -0.02em;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(176,122,63,0.2);
+    }
+
+    .mobile-nav-items a:active {
+      background: var(--golden-brown);
+      color: white;
+      transform: scale(0.97);
+    }
+
+    /* Mobil menü altındaki iletişim butonları */
+    .mobile-menu-contact {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .mobile-menu-contact a {
+      flex: 1;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 60px;
+      font-weight: 600;
+      background: white;
+      color: var(--dark-brown);
+      text-decoration: none;
+      border: 1px solid var(--golden-brown);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .mobile-menu-contact a:first-child {
+      background: var(--golden-brown);
+      color: white;
+      border: none;
     }
 
     /* BUTONLAR */
@@ -623,27 +773,12 @@
         padding: 0.75rem 1rem;
       }
 
+      /* masaüstü menüyü gizle */
       .nav-links {
         display: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.8rem;
-        padding: 1.2rem 0 0.8rem;
-        border-top: 1px solid #e9dbd2;
-        margin-top: 0.5rem;
       }
 
-      .nav-links.show {
-        display: flex;
-      }
-
-      .nav-links a {
-        font-size: 1.1rem;
-        padding: 0.3rem 0;
-        white-space: normal;
-      }
-
+      /* hamburger görünür */
       .hamburger {
         display: flex;
       }
@@ -791,6 +926,8 @@
         <a href="#ana-sayfa">Dr. Betül Temel</a>
         <span>Estetik & Kozmetoloji</span>
       </div>
+      
+      <!-- Masaüstü menü -->
       <ul class="nav-links" id="navLinks">
         <li><a href="#ana-sayfa" class="active">Ana Sayfa</a></li>
         <li><a href="#hakkinda">Hakkımda</a></li>
@@ -798,11 +935,33 @@
         <li><a href="#sss">Merak Edilenler</a></li>
         <li><a href="#iletisim">İletişim</a></li>
       </ul>
+
+      <!-- Hamburger (mobil) -->
       <div class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
       </div>
     </nav>
   </header>
+
+  <!-- Mobil menü overlay ve panel -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="mobile-menu-panel" id="mobileMenuPanel">
+    <div class="mobile-menu-header">
+      <span class="menu-title">Menü</span>
+      <button class="close-menu" id="closeMenu" aria-label="Kapat"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-nav-items">
+      <a href="#ana-sayfa">Ana Sayfa</a>
+      <a href="#hakkinda">Hakkımda</a>
+      <a href="#islemler">İşlemler</a>
+      <a href="#sss">Merak Edilenler</a>
+      <a href="#iletisim">İletişim</a>
+    </div>
+    <div class="mobile-menu-contact">
+      <a href="tel:+905438207206"><i class="fas fa-phone"></i> Ara</a>
+      <a href="https://wa.me/905438207206"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
 
   <!-- HERO -->
   <section id="ana-sayfa" class="hero">
@@ -925,30 +1084,59 @@
 
   <script>
     (function() {
-      // hamburger menü
+      // Elemanlar
       const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('navLinks');
+      const overlay = document.getElementById('menuOverlay');
+      const mobilePanel = document.getElementById('mobileMenuPanel');
+      const closeBtn = document.getElementById('closeMenu');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-items a');
       
-      if (hamburger && navLinks) {
+      // Menüyü aç
+      function openMenu() {
+        overlay.classList.add('active');
+        mobilePanel.classList.add('show');
+        document.body.style.overflow = 'hidden'; // sayfayı sabitle
+      }
+
+      // Menüyü kapat
+      function closeMenu() {
+        overlay.classList.remove('active');
+        mobilePanel.classList.remove('show');
+        document.body.style.overflow = ''; // geri aç
+      }
+
+      if (hamburger) {
         hamburger.addEventListener('click', (e) => {
           e.stopPropagation();
-          navLinks.classList.toggle('show');
-        });
-
-        // linklere tıklayınca menüyü kapat
-        navLinks.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', () => {
-            navLinks.classList.remove('show');
-          });
-        });
-
-        // dışarı tıklayınca kapat
-        document.addEventListener('click', (e) => {
-          if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-            navLinks.classList.remove('show');
-          }
+          openMenu();
         });
       }
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closeMenu);
+      }
+
+      if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+      }
+
+      // mobil linklere tıklayınca kapat ve scroll yap
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          const hash = link.getAttribute('href');
+          if (hash && hash.startsWith('#')) {
+            const target = document.querySelector(hash);
+            if (target) {
+              closeMenu(); // önce menüyü kapat
+              setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.pushState(null, null, hash);
+              }, 200); // menü kapanma animasyonu için kısa gecikme
+            }
+          }
+        });
+      });
 
       // accordion
       const accordionItems = document.querySelectorAll('.accordion-item');
@@ -961,7 +1149,7 @@
         }
       });
 
-      // smooth scroll
+      // smooth scroll masaüstü menü ve footer
       document.querySelectorAll('.nav-links a, .footer-col a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
           const hash = this.getAttribute('href');
@@ -970,15 +1158,16 @@
             const target = document.querySelector(hash);
             if (target) {
               target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              // url'i güncelle
               history.pushState(null, null, hash);
             }
           }
         });
       });
 
-      // aktif menü işaretleme
+      // aktif menü işaretleme (masaüstü)
       const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      
       window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
@@ -989,7 +1178,7 @@
           }
         });
 
-        navLinks.querySelectorAll('a').forEach(link => {
+        navLinks.forEach(link => {
           link.classList.remove('active');
           const href = link.getAttribute('href').replace('#', '');
           if (href === current) {
