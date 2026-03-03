@@ -551,7 +551,61 @@
 
     .footer-col a:hover { color: white; }
 
-    /* responsive */
+    /* ==================== */
+    /* MOBIL İYİLEŞTİRMELER  */
+    /* ==================== */
+    @media (max-width: 800px) {
+      /* HERO mobil düzen - resmi üste al */
+      .hero {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .hero-image {
+        order: -1;          /* resmi üste alır */
+        width: 100%;
+      }
+
+      .hero-image img {
+        max-width: 280px;
+        border-radius: 50%;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-content p {
+        margin: 0 auto 2rem;
+      }
+
+      /* HAKKIMDA kartları 2x2 grid */
+      .about-grid {
+        padding: 2rem 1.5rem;
+      }
+
+      .about-visual {
+        display: grid;
+        grid-template-columns: 1fr 1fr;   /* 2x2 düzen */
+        gap: 1rem;
+      }
+
+      .visual-card {
+        width: 100%;
+        height: auto;
+        padding: 1.2rem 0.8rem;
+      }
+
+      .visual-card i {
+        font-size: 2.2rem;
+      }
+
+      .about-text {
+        text-align: center;
+      }
+    }
+
+    /* Genel mobil düzenlemeler (eski stiller korunur) */
     @media (max-width: 800px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
