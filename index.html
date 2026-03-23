@@ -708,46 +708,40 @@
       gap: 2rem;
     }
 
+    /* FOOTER BRAND - ORTALANMIŞ VE PREMIUM GÖRÜNÜM */
     .footer-brand {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
       min-width: 200px;
+      align-items: center;   /* YATAY ORTALAMA */
+      text-align: center;    /* YAZILARI ORTALAR */
     }
 
-    .footer-brand .logo-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: var(--dark-brown);
-    }
-
-    .footer-contact {
-      margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-    }
-
+    /* FOOTER ITEM - İKONLAR ÜSTTE YAZILAR ALTA, TAM ORTADA */
     .footer-item {
       display: flex;
-      align-items: flex-start;
-      gap: 10px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 8px;
       font-size: 0.9rem;
       color: var(--dark-brown);
       line-height: 1.4;
     }
 
     .footer-item i {
-      min-width: 30px;
-      height: 30px;
+      min-width: 40px;
+      height: 40px;
       background: rgba(176,122,63,0.1);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--golden-brown);
-      font-size: 0.95rem;
+      font-size: 1.1rem;
+      margin-bottom: 2px;
     }
 
     .footer-services {
@@ -781,7 +775,7 @@
       padding-left: 4px;
     }
 
-    /* FOOTER MAP - DOĞRU YERDE */
+    /* FOOTER MAP */
     .footer-map {
       flex: 1 1 260px;
       max-width: 320px;
@@ -1049,6 +1043,8 @@
       .footer-map {
         max-width: 100%;
         width: 100%;
+        align-items: center;
+        text-align: center;
       }
       .footer-map iframe {
         height: 200px;
@@ -1063,6 +1059,10 @@
         width: 280px;
         right: 15px;
         bottom: 90px;
+      }
+      /* Mobilde footer item'ların daha okunabilir olması */
+      .footer-item {
+        font-size: 0.85rem;
       }
     }
 
@@ -1205,7 +1205,6 @@
         <a href="https://www.doktorbetultemel.com/sac-prp">Saç PRP</a>
       </div>
 
-      <!-- DOĞRU YER: footer-map burada, CSS'in içinde değil -->
       <div class="footer-map">
         <h4>Konumumuz</h4>
         <iframe 
