@@ -850,6 +850,30 @@
       color: var(--golden-brown);
       letter-spacing: 0.5px;
     }
+    .footer-map {
+  flex: 1 1 260px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-map h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: var(--dark-brown);
+  border-bottom: 2px solid rgba(176,122,63,0.15);
+  padding-bottom: 4px;
+  display: inline-block;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  border: 2px solid #f0e3d8;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
     /* YENİ: Hizmetlerimiz kategorisi */
     .footer-services {
@@ -886,7 +910,7 @@
       padding-left: 4px;
       opacity: 1;
     }
-
+    
     .footer-social {
       display: flex;
       gap: 1rem;
@@ -1097,6 +1121,16 @@
     /* ==================== */
     /* MOBIL DÜZENLEMELER   */
     /* ==================== */
+    @media (max-width: 768px) {
+  .footer-map {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .footer-map iframe {
+    height: 200px;
+  }
+}
     @media (max-width: 768px) {
       .navbar {
         padding: 0.75rem 1rem;
