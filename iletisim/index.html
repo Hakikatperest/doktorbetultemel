@@ -817,7 +817,7 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-        <a href="#ana-sayfa">Doktor Betül Temel</a>
+        <a href="index.html">Doktor Betül Temel</a>
       </div>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Ana Sayfa</a></li>
@@ -905,7 +905,7 @@
     </div>
   </div>
 
-  <!-- FOOTER (ANA SAYFA İLE BİREBİR) -->
+  <!-- FOOTER (ANA SAYFA İLE BİREBİR, SSS YERİNE MERAK EDİLENLER) -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
@@ -948,7 +948,7 @@
         <a href="index.html">Ana Sayfa</a>
         <a href="index.html#hakkinda">Hakkımda</a>
         <a href="index.html#islemler">İşlemler</a>
-        <a href="index.html#sss">SSS</a>
+        <a href="index.html#sss">Merak Edilenler</a>
         <a href="iletisim.html">İletişim</a>
       </div>
     </div>
@@ -999,13 +999,45 @@
       if (hamburger) hamburger.addEventListener('click', openMenu);
       if (closeBtn) closeBtn.addEventListener('click', closeMenu);
       if (overlay) overlay.addEventListener('click', closeMenu);
+      
+      // Mobil menü linkleri - tıklanınca ana sayfaya yönlendir ve sayfa içi hedefe kaydır
       mobileLinks.forEach(link => {
         link.addEventListener('click', (e) => {
           const href = link.getAttribute('href');
           if (href === 'iletisim.html') return;
           e.preventDefault();
           closeMenu();
-          if (href && href !== '#') window.location.href = href;
+          // Sayfa içi anchor için
+          if (href && href.includes('#') && href !== '#') {
+            // Ana sayfaya yönlendir + hedefe kaydır
+            window.location.href = href;
+          } else if (href && href !== '#') {
+            window.location.href = href;
+          }
+        });
+      });
+
+      // Üst menü linkleri - anchor içerenler için smooth scroll (ana sayfaya git ve kaydır)
+      const navMenuLinks = document.querySelectorAll('.nav-links a');
+      navMenuLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          if (href && href.includes('#') && href !== 'iletisim.html') {
+            e.preventDefault();
+            window.location.href = href;
+          }
+        });
+      });
+
+      // Footer linkleri - aynı şekilde
+      const footerLinks = document.querySelectorAll('.footer-links a');
+      footerLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          if (href && href.includes('#') && href !== 'iletisim.html') {
+            e.preventDefault();
+            window.location.href = href;
+          }
         });
       });
 
@@ -1022,7 +1054,7 @@
             alert('Lütfen adınızı ve telefon numaranızı giriniz.');
             return;
           }
-          let waMessage = `Merhaba Dr. Betül Temem, randevu ve bilgi talebi oluşturmak istiyorum.%0A%0AAd Soyad: ${encodeURIComponent(name)}%0ATelefon: ${encodeURIComponent(phone)}`;
+          let waMessage = `Merhaba Dr. Betül Temel, randevu ve bilgi talebi oluşturmak istiyorum.%0A%0AAd Soyad: ${encodeURIComponent(name)}%0ATelefon: ${encodeURIComponent(phone)}`;
           if (email) waMessage += `%0AE-posta: ${encodeURIComponent(email)}`;
           if (message) waMessage += `%0AMesaj: ${encodeURIComponent(message)}`;
           const waUrl = `https://wa.me/905438207206?text=${waMessage}`;
@@ -1030,7 +1062,7 @@
         });
       }
 
-      // Accordion yok ama chat bubble ve reveal için
+      // chat bubble
       const chatBubble = document.getElementById('chatBubble');
       const chatClose = document.getElementById('chatClose');
       let chatDismissed = false;
@@ -1047,11 +1079,9 @@
       }
 
       // Aktif menü vurgusu (iletisim.html için)
-      const navLinks = document.querySelectorAll('.nav-links a');
-      navLinks.forEach(link => {
+      const allNavLinks = document.querySelectorAll('.nav-links a');
+      allNavLinks.forEach(link => {
         if (link.getAttribute('href') === 'iletisim.html' || link.getAttribute('href') === '#iletisim') {
-          link.classList.add('active');
-        } else if (window.location.pathname.includes('iletisim.html') && link.getAttribute('href') === 'iletisim.html') {
           link.classList.add('active');
         }
       });
