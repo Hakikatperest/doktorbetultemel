@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>İletişim - Ankara Estetik Klinik | Dr. Betül Temel</title>
+  <meta name="description" content="Dr. Betül Temel ile iletişime geçin, randevu oluşturun. Ankara Kızılay kliniğimiz, çalışma saatleri ve hızlı WhatsApp hattı.">
+  <meta name="keywords" content="iletişim, randevu, ankara estetik doktoru, dr betül temel iletişim, klinik adres, telefon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --beige: #f4ede7;
+      --cream: #faf6f2;
+      --golden-brown: #b07a3f;
+      --dark-brown: #6a4b2f;
+      --soft-black: #2e2a27;
+      --light-bg: #fdf9f6;
+      --card-bg: #ffffffd9;
+      --soft-shadow: 0 15px 35px -10px rgba(106, 75, 47, 0.08);
+      --border-radius-card: 32px;
+      --border-radius-btn: 40px;
+      --border-radius-section: 36px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--soft-black);
+      line-height: 1.5;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    h1, h2, h3, h4, .serif-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      color: var(--dark-brown);
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .section-title span {
+      color: var(--golden-brown);
+      border-bottom: 2px solid rgba(176,122,63,0.2);
+      padding-bottom: 4px;
+    }
+
+    /* HEADER (ANA SAYFA İLE AYNI) */
+    header {
+      background-color: rgba(253, 249, 246, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid #e9dbd2;
+    }
+
+    .navbar {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 700;
+      color: var(--dark-brown);
+      text-decoration: none;
+      line-height: 1.2;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--dark-brown);
+      font-size: 1rem;
+      position: relative;
+      padding-bottom: 6px;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--golden-brown), #d4a373);
+      transition: width 0.25s ease;
+      border-radius: 4px;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+      background: rgba(176, 122, 63, 0.08);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      justify-content: center;
+      align-items: center;
+      z-index: 1002;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2.5px;
+      background: var(--dark-brown);
+      margin: 3px 0;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      backdrop-filter: blur(5px);
+      z-index: 1001;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .menu-overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    .mobile-menu-panel {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #fdf3ec;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      padding: 2rem 1.5rem 2.5rem;
+      box-shadow: 0 -10px 40px rgba(106, 75, 47, 0.15);
+      z-index: 1002;
+      transform: translateY(100%);
+      transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.1, 1);
+      border-top: 2px solid rgba(176,122,63,0.2);
+    }
+
+    .mobile-menu-panel.show {
+      transform: translateY(0);
+    }
+
+    .mobile-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #e9cfc0;
+    }
+
+    .mobile-menu-header .menu-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: var(--dark-brown);
+    }
+
+    .close-menu {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var(--golden-brown);
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .mobile-nav-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .mobile-nav-items a {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--dark-brown);
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 60px;
+      text-align: center;
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(176,122,63,0.2);
+    }
+
+    .mobile-menu-contact {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+
+    .mobile-menu-contact a {
+      flex: 1;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 60px;
+      font-weight: 600;
+      background: white;
+      color: var(--dark-brown);
+      text-decoration: none;
+      border: 1px solid var(--golden-brown);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .mobile-menu-contact a:first-child {
+      background: var(--golden-brown);
+      color: white;
+      border: none;
+    }
+
+    /* BUTONLAR */
+    .btn-gold {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 2rem;
+      border-radius: var(--border-radius-btn);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      background: linear-gradient(135deg, #c99e6e, #b07a3f, #a26d37);
+      color: white;
+      box-shadow: 0 10px 20px -8px rgba(176, 122, 63, 0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+      gap: 8px;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 25px -8px rgba(176,122,63,0.45);
+    }
+
+    /* İLETİŞİM SAYFASI ÖZEL STİLLER */
+    .contact-hero {
+      background: linear-gradient(120deg, #fef7f0, #fcf3ea);
+      border-radius: var(--border-radius-section);
+      padding: 2rem 2rem;
+      margin: 2rem auto 0;
+      text-align: center;
+    }
+
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    .contact-form-card {
+      flex: 1.2 1 380px;
+      background: white;
+      border-radius: 40px;
+      padding: 2rem 2rem;
+      box-shadow: var(--soft-shadow);
+      border: 1px solid #f0e2d8;
+    }
+
+    .contact-form-card h3 {
+      font-size: 1.8rem;
+      color: var(--dark-brown);
+      margin-bottom: 1.8rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .form-group {
+      margin-bottom: 1.4rem;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      border-radius: 60px;
+      border: 1px solid #e7d8cf;
+      background: #fefbf8;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+
+    .form-group textarea {
+      border-radius: 28px;
+      resize: vertical;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--golden-brown);
+      box-shadow: 0 0 0 3px rgba(176,122,63,0.15);
+    }
+
+    .submit-wa {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      border: none;
+      width: 100%;
+      justify-content: center;
+      font-size: 1.1rem;
+      padding: 1rem;
+      cursor: pointer;
+    }
+
+    .info-panel {
+      flex: 1 1 320px;
+      background: white;
+      border-radius: 40px;
+      padding: 2rem;
+      box-shadow: var(--soft-shadow);
+      border: 1px solid #f0e2d8;
+    }
+
+    .info-block {
+      margin-bottom: 2rem;
+    }
+
+    .info-block h4 {
+      font-size: 1.3rem;
+      color: var(--dark-brown);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-left: 3px solid var(--golden-brown);
+      padding-left: 1rem;
+    }
+
+    .info-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      color: #5a4a3d;
+    }
+
+    .info-detail i {
+      width: 36px;
+      height: 36px;
+      background: var(--beige);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--golden-brown);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .working-hours {
+      background: #fef6ef;
+      border-radius: 28px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .hour-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      border-bottom: 1px dashed #e7cfc0;
+    }
+
+    .hour-row:last-child {
+      border: none;
+    }
+
+    .hour-day {
+      font-weight: 600;
+      color: var(--dark-brown);
+    }
+
+    .map-card {
+      flex: 1 1 100%;
+      margin-top: 1rem;
+      background: white;
+      border-radius: 40px;
+      padding: 1.5rem;
+      box-shadow: var(--soft-shadow);
+      border: 1px solid #f0e2d8;
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 320px;
+      border-radius: 28px;
+      border: none;
+      margin-top: 0.8rem;
+    }
+
+    /* FOOTER (ANA SAYFA İLE %100 AYNI) */
+    footer {
+      background: rgba(253, 249, 246, 0.98);
+      backdrop-filter: blur(12px);
+      color: var(--dark-brown);
+      padding: 3rem 1.5rem 2rem;
+      margin-top: 4rem;
+      border-top: 1px solid #e9dbd2;
+    }
+
+    .footer-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      min-width: 200px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--dark-brown);
+      line-height: 1.4;
+    }
+
+    .footer-item i {
+      min-width: 40px;
+      height: 40px;
+      background: rgba(176,122,63,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--golden-brown);
+      font-size: 1.1rem;
+      margin-bottom: 2px;
+    }
+
+    .footer-services {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-width: 200px;
+    }
+
+    .footer-services h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--dark-brown);
+      margin-bottom: 0.2rem;
+      border-bottom: 2px solid rgba(176,122,63,0.15);
+      padding-bottom: 0.3rem;
+      display: inline-block;
+    }
+
+    .footer-services a {
+      color: var(--dark-brown);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      width: fit-content;
+    }
+
+    .footer-services a:hover {
+      color: var(--golden-brown);
+      padding-left: 4px;
+    }
+
+    .footer-map {
+      flex: 1 1 260px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-map h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--dark-brown);
+      border-bottom: 2px solid rgba(176,122,63,0.15);
+      padding-bottom: 4px;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .footer-map iframe {
+      width: 100%;
+      height: 220px;
+      border-radius: 20px;
+      border: 2px solid #f0e3d8;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      transition: all 0.2s;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .footer-social a.instagram {
+      background: linear-gradient(45deg, #f09433 0%, #d62976 40%, #962fbf 80%, #4f5bd5 100%);
+      color: white;
+    }
+    .footer-social a.facebook {
+      background: #1877F2;
+      color: white;
+    }
+    .footer-social a.whatsapp {
+      background: #25D366;
+      color: white;
+    }
+    .footer-social a:hover {
+      transform: translateY(-5px) scale(1.05);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--dark-brown);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      font-weight: 500;
+    }
+
+    .footer-links a:hover {
+      color: var(--golden-brown);
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--golden-brown);
+      border-top: 1px solid rgba(176,122,63,0.15);
+      margin-top: 2rem;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* FLOATING BUTTONS - ANA SAYFA İLE AYNI (sağ altta) */
+    .floating-buttons {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .float-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 8px 18px -5px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    .float-btn.whatsapp { background: #25D366; }
+    .float-btn.phone { background: linear-gradient(145deg, #b07a3f, #8f623a); }
+    .float-btn:hover { transform: scale(1.1); }
+
+    /* chat bubble (ana sayfadaki gibi) */
+    .chat-bubble {
+      position: fixed;
+      bottom: 100px;
+      right: 30px;
+      width: 320px;
+      background: white;
+      border-radius: 24px 24px 5px 24px;
+      box-shadow: 0 15px 40px rgba(106, 75, 47, 0.2);
+      z-index: 998;
+      padding: 1.5rem;
+      transform: translateY(20px);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.1, 1);
+      border: 1px solid #e9dbd2;
+    }
+
+    .chat-bubble.show {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .chat-close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--golden-brown);
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+
+    .chat-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .chat-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c99e6e, #b07a3f);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .chat-title h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      color: var(--dark-brown);
+    }
+
+    .chat-title p {
+      font-size: 0.8rem;
+      color: #25D366;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .chat-message {
+      font-size: 0.95rem;
+      color: #5a4a3d;
+      margin-bottom: 1.2rem;
+      line-height: 1.5;
+      background: #faf6f2;
+      padding: 0.8rem;
+      border-radius: 16px;
+    }
+
+    .chat-buttons {
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    .chat-buttons a {
+      flex: 1;
+      text-align: center;
+      padding: 0.8rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .chat-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .chat-call {
+      background: var(--golden-brown);
+      color: white;
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 0.75rem 1rem;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .contact-wrapper {
+        flex-direction: column;
+      }
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      .footer-services {
+        align-items: center;
+      }
+      .footer-map {
+        max-width: 100%;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+      }
+      .chat-bubble {
+        width: 280px;
+        right: 15px;
+        bottom: 90px;
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#ana-sayfa">Doktor Betül Temel</a>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="index.html#hakkinda">Hakkımda</a></li>
+        <li><a href="index.html#islemler">İşlemler</a></li>
+        <li><a href="index.html#sss">Merak Edilenler</a></li>
+        <li><a href="iletisim.html" class="active">İletişim</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="mobile-menu-panel" id="mobileMenuPanel">
+    <div class="mobile-menu-header">
+      <span class="menu-title">Menü</span>
+      <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-nav-items">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="index.html#hakkinda">Hakkımda</a>
+      <a href="index.html#islemler">İşlemler</a>
+      <a href="index.html#sss">Merak Edilenler</a>
+      <a href="iletisim.html">İletişim</a>
+    </div>
+    <div class="mobile-menu-contact">
+      <a href="tel:+905438207206"><i class="fas fa-phone"></i> Ara</a>
+      <a href="https://wa.me/905438207206"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top: 2rem;">
+    <div class="contact-hero reveal">
+      <h1 class="section-title" style="margin-bottom: 0.5rem;"><span>İletişim</span> & Randevu</h1>
+      <p style="max-width: 700px; margin: 0 auto; color: #5f4e42;">Size en kısa sürede dönüş yapalım. Sorularınızı iletebilir, randevu talebi oluşturabilirsiniz.</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <!-- İLETİŞİM FORMU (Whatsapp yönlendirmeli) -->
+      <div class="contact-form-card reveal">
+        <h3><i class="fas fa-pen-alt" style="margin-right: 0.6rem; color: var(--golden-brown);"></i> Hızlı Randevu</h3>
+        <form id="contactForm">
+          <div class="form-group"><input type="text" id="name" placeholder="Adınız Soyadınız" required></div>
+          <div class="form-group"><input type="tel" id="phone" placeholder="Telefon Numaranız" required></div>
+          <div class="form-group"><input type="email" id="email" placeholder="E-posta (isteğe bağlı)"></div>
+          <div class="form-group"><textarea rows="3" id="message" placeholder="İşlem talebi veya sorunuz..."></textarea></div>
+          <button type="submit" class="btn-gold submit-wa"><i class="fab fa-whatsapp"></i> WhatsApp ile İlet</button>
+        </form>
+        <p style="font-size: 0.8rem; margin-top: 1rem; color: #b28b64;">*Form gönderildiğinde WhatsApp üzerinden size ulaşılacaktır.</p>
+      </div>
+
+      <!-- İLETİŞİM BİLGİLERİ + ÇALIŞMA SAATLERİ -->
+      <div class="info-panel reveal">
+        <div class="info-block">
+          <h4><i class="fas fa-address-card"></i> Klinik Bilgileri</h4>
+          <div class="info-detail"><i class="fas fa-map-marker-alt"></i> <span>Kızılay, Meşrutiyet Mahallesi, Konur Sokak No: 43, 06420 Çankaya/Ankara</span></div>
+          <div class="info-detail"><i class="fas fa-phone-alt"></i> <span><a href="tel:+905438207206" style="color: var(--dark-brown); text-decoration: none;">0543 820 72 06</a></span></div>
+          <div class="info-detail"><i class="fab fa-whatsapp"></i> <span><a href="https://wa.me/905438207206" style="color: var(--dark-brown); text-decoration: none;">0543 820 72 06 (WhatsApp)</a></span></div>
+          <div class="info-detail"><i class="fas fa-envelope"></i> <span>info@doktorbetultemel.com</span></div>
+        </div>
+
+        <div class="info-block">
+          <h4><i class="far fa-clock"></i> Çalışma Saatleri</h4>
+          <div class="working-hours">
+            <div class="hour-row"><span class="hour-day">Pazartesi - Cuma</span><span>10:00 – 19:00</span></div>
+            <div class="hour-row"><span class="hour-day">Cumartesi</span><span>10:00 – 16:00</span></div>
+            <div class="hour-row"><span class="hour-day">Pazar</span><span>Kapalı (Online danışmanlık yok)</span></div>
+            <div class="hour-row" style="margin-top: 8px; color: var(--golden-brown);"><span>Randevu</span><span>Önceden rezervasyon zorunludur</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HARİTA -->
+      <div class="map-card reveal">
+        <h4 style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.3rem;"><i class="fas fa-location-dot" style="color: var(--golden-brown);"></i> Konumumuz</h4>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.116589919057!2d32.857045899999996!3d39.916407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fa62147a8cb%3A0xaa82b73909c6fb71!2sDr.%20Bet%C3%BCl%20Temel%20Estetik%20ve%20Dermokozmetoloji%20Doktoru!5e0!3m2!1str!2str!4v1773849294926!5m2!1str!2str"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER (ANA SAYFA İLE BİREBİR) -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-name">Doktor Betül Temel</span>
+        <div class="footer-contact">
+          <div class="footer-item"><i class="fas fa-user-md"></i><span>Dr. Betül Temel Estetik ve Dermokozmetoloji Doktoru</span></div>
+          <div class="footer-item"><i class="fas fa-map-marker-alt"></i><span>Kızılay, Meşrutiyet Mahallesi, Konur Sokak No: 43, 06420 Çankaya/Ankara</span></div>
+          <div class="footer-item"><i class="fas fa-phone-alt"></i><span>0543 820 72 06</span></div>
+        </div>
+      </div>
+      
+      <div class="footer-services">
+        <h4>Hizmetlerimiz</h4>
+        <a href="https://www.doktorbetultemel.com/biyolojik-lifting">Biyolojik Lifting</a>
+        <a href="https://www.doktorbetultemel.com/altin-igne">Altın İğne</a>
+        <a href="https://www.doktorbetultemel.com/sivi-yuz-germe">Sıvı Yüz Germe</a>
+        <a href="https://www.doktorbetultemel.com/masseter-botoks">Masseter Botoks</a>
+        <a href="https://www.doktorbetultemel.com/mezoterapi">Mezoterapi</a>
+        <a href="https://www.doktorbetultemel.com/burun-dolgusu">Burun Dolgusu</a>
+        <a href="https://www.doktorbetultemel.com/ip-aski">İp Askı</a>
+        <a href="https://www.doktorbetultemel.com/sac-prp">Saç PRP</a>
+      </div>
+
+      <div class="footer-map">
+        <h4>Konumumuz</h4>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.116589919057!2d32.857045899999996!3d39.916407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34fa62147a8cb%3A0xaa82b73909c6fb71!2sDr.%20Bet%C3%BCl%20Temel%20Estetik%20ve%20Dermokozmetoloji%20Doktoru!5e0!3m2!1str!2str!4v1773849294926!5m2!1str!2str"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/dr.betultemel/" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/people/Dr-Bet%C3%BCl-TEMEL/61557414041796/" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/905438207206" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="index.html#hakkinda">Hakkımda</a>
+        <a href="index.html#islemler">İşlemler</a>
+        <a href="index.html#sss">SSS</a>
+        <a href="iletisim.html">İletişim</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Dr. Betül Temel - Tüm hakları saklıdır.
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS (SAĞ ALTTAKİ WHATSAPP VE ARAMA BUTONLARI) -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/905438207206" class="float-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+905438207206" class="float-btn phone"><i class="fas fa-phone"></i></a>
+  </div>
+
+  <!-- CHAT BUBBLE (ANA SAYFA İLE AYNI) -->
+  <div class="chat-bubble" id="chatBubble">
+    <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
+    <div class="chat-header">
+      <div class="chat-avatar"><i class="fas fa-user-md"></i></div>
+      <div class="chat-title"><h4>Dr. Betül Temel</h4><p><i class="fas fa-circle"></i> Çevrimiçi</p></div>
+    </div>
+    <div class="chat-message">Doktorumuz şuan randevu için müsait, detaylı bilgi için bize ulaşabilirsiniz.</div>
+    <div class="chat-buttons">
+      <a href="https://wa.me/905438207206" class="chat-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="tel:+905438207206" class="chat-call"><i class="fas fa-phone"></i> Ara</a>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      // Mobil menü işlemleri
+      const hamburger = document.getElementById('hamburger');
+      const overlay = document.getElementById('menuOverlay');
+      const mobilePanel = document.getElementById('mobileMenuPanel');
+      const closeBtn = document.getElementById('closeMenu');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-items a');
+
+      function openMenu() {
+        overlay.classList.add('active');
+        mobilePanel.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeMenu() {
+        overlay.classList.remove('active');
+        mobilePanel.classList.remove('show');
+        document.body.style.overflow = '';
+      }
+      if (hamburger) hamburger.addEventListener('click', openMenu);
+      if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+      if (overlay) overlay.addEventListener('click', closeMenu);
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          const href = link.getAttribute('href');
+          if (href === 'iletisim.html') return;
+          e.preventDefault();
+          closeMenu();
+          if (href && href !== '#') window.location.href = href;
+        });
+      });
+
+      // Form: WhatsApp yönlendirmeli
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const name = document.getElementById('name').value.trim();
+          const phone = document.getElementById('phone').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const message = document.getElementById('message').value.trim();
+          if (!name || !phone) {
+            alert('Lütfen adınızı ve telefon numaranızı giriniz.');
+            return;
+          }
+          let waMessage = `Merhaba Dr. Betül Temem, randevu ve bilgi talebi oluşturmak istiyorum.%0A%0AAd Soyad: ${encodeURIComponent(name)}%0ATelefon: ${encodeURIComponent(phone)}`;
+          if (email) waMessage += `%0AE-posta: ${encodeURIComponent(email)}`;
+          if (message) waMessage += `%0AMesaj: ${encodeURIComponent(message)}`;
+          const waUrl = `https://wa.me/905438207206?text=${waMessage}`;
+          window.open(waUrl, '_blank');
+        });
+      }
+
+      // Accordion yok ama chat bubble ve reveal için
+      const chatBubble = document.getElementById('chatBubble');
+      const chatClose = document.getElementById('chatClose');
+      let chatDismissed = false;
+      if (chatClose) {
+        chatClose.addEventListener('click', () => {
+          chatBubble.classList.remove('show');
+          chatDismissed = true;
+        });
+      }
+      if (window.innerWidth <= 768) {
+        setTimeout(() => {
+          if (!chatDismissed && chatBubble) chatBubble.classList.add('show');
+        }, 10000);
+      }
+
+      // Aktif menü vurgusu (iletisim.html için)
+      const navLinks = document.querySelectorAll('.nav-links a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === 'iletisim.html' || link.getAttribute('href') === '#iletisim') {
+          link.classList.add('active');
+        } else if (window.location.pathname.includes('iletisim.html') && link.getAttribute('href') === 'iletisim.html') {
+          link.classList.add('active');
+        }
+      });
+
+      // Reveal animasyonları
+      const revealElements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      revealElements.forEach(el => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>
