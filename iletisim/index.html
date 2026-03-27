@@ -68,7 +68,7 @@
       padding-bottom: 4px;
     }
 
-    /* HEADER (ANA SAYFA İLE AYNI) */
+    /* HEADER */
     header {
       background-color: rgba(253, 249, 246, 0.96);
       backdrop-filter: blur(12px);
@@ -272,7 +272,6 @@
       border: none;
     }
 
-    /* BUTONLAR */
     .btn-gold {
       display: inline-flex;
       align-items: center;
@@ -448,7 +447,7 @@
       margin-top: 0.8rem;
     }
 
-    /* FOOTER (ANA SAYFA İLE %100 AYNI) */
+    /* FOOTER */
     footer {
       background: rgba(253, 249, 246, 0.98);
       backdrop-filter: blur(12px);
@@ -598,6 +597,8 @@
       display: flex;
       gap: 2rem;
       flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
     }
 
     .footer-links a {
@@ -624,7 +625,7 @@
       margin-right: auto;
     }
 
-    /* FLOATING BUTTONS - ANA SAYFA İLE AYNI (sağ altta) */
+    /* FLOATING BUTTONS */
     .floating-buttons {
       position: fixed;
       bottom: 20px;
@@ -653,7 +654,6 @@
     .float-btn.phone { background: linear-gradient(145deg, #b07a3f, #8f623a); }
     .float-btn:hover { transform: scale(1.1); }
 
-    /* chat bubble (ana sayfadaki gibi) */
     .chat-bubble {
       position: fixed;
       bottom: 100px;
@@ -767,7 +767,6 @@
       color: white;
     }
 
-    /* responsive */
     @media (max-width: 768px) {
       .navbar {
         padding: 0.75rem 1rem;
@@ -824,7 +823,7 @@
         <li><a href="https://www.doktorbetultemel.com/#hakkinda">Hakkımda</a></li>
         <li><a href="https://www.doktorbetultemel.com/#islemler">İşlemler</a></li>
         <li><a href="https://www.doktorbetultemel.com/#sss">Merak Edilenler</a></li>
-        <li><a href="/iletisim" class="active">İletişim</a></li>
+        <li><a href="https://www.doktorbetultemel.com/iletisim/" class="active">İletişim</a></li>
       </ul>
       <div class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
@@ -843,7 +842,7 @@
       <a href="https://www.doktorbetultemel.com/#hakkinda">Hakkımda</a>
       <a href="https://www.doktorbetultemel.com/#islemler">İşlemler</a>
       <a href="https://www.doktorbetultemel.com/#sss">Merak Edilenler</a>
-      <a href="https://www.doktorbetultemel.com/iletisim">İletişim</a>
+      <a href="https://www.doktorbetultemel.com/iletisim/">İletişim</a>
     </div>
     <div class="mobile-menu-contact">
       <a href="tel:+905438207206"><i class="fas fa-phone"></i> Ara</a>
@@ -858,7 +857,6 @@
     </div>
 
     <div class="contact-wrapper">
-      <!-- İLETİŞİM FORMU (Whatsapp yönlendirmeli) -->
       <div class="contact-form-card reveal">
         <h3><i class="fas fa-pen-alt" style="margin-right: 0.6rem; color: var(--golden-brown);"></i> Hızlı Randevu</h3>
         <form id="contactForm">
@@ -871,7 +869,6 @@
         <p style="font-size: 0.8rem; margin-top: 1rem; color: #b28b64;">*Form gönderildiğinde WhatsApp üzerinden size ulaşılacaktır.</p>
       </div>
 
-      <!-- İLETİŞİM BİLGİLERİ + ÇALIŞMA SAATLERİ -->
       <div class="info-panel reveal">
         <div class="info-block">
           <h4><i class="fas fa-address-card"></i> Klinik Bilgileri</h4>
@@ -892,7 +889,6 @@
         </div>
       </div>
 
-      <!-- HARİTA -->
       <div class="map-card reveal">
         <h4 style="display: flex; align-items: center; gap: 0.5rem; font-size: 1.3rem;"><i class="fas fa-location-dot" style="color: var(--golden-brown);"></i> Konumumuz</h4>
         <iframe 
@@ -905,16 +901,13 @@
     </div>
   </div>
 
-  <!-- FOOTER (ANA SAYFA İLE BİREBİR, SSS YERİNE MERAK EDİLENLER) -->
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="logo-name">Doktor Betül Temel</span>
-        <div class="footer-contact">
-          <div class="footer-item"><i class="fas fa-user-md"></i><span>Dr. Betül Temel Estetik ve Dermokozmetoloji Doktoru</span></div>
-          <div class="footer-item"><i class="fas fa-map-marker-alt"></i><span>Kızılay, Meşrutiyet Mahallesi, Konur Sokak No: 43, 06420 Çankaya/Ankara</span></div>
-          <div class="footer-item"><i class="fas fa-phone-alt"></i><span>0543 820 72 06</span></div>
-        </div>
+        <div class="logo-name" style="font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;">Dr. Betül Temel</div>
+        <div class="footer-item"><i class="fas fa-user-md"></i><span>Estetik ve Dermokozmetoloji Doktoru</span></div>
+        <div class="footer-item"><i class="fas fa-map-marker-alt"></i><span>Kızılay, Meşrutiyet Mah. Konur Sok. No:43, Çankaya/Ankara</span></div>
+        <div class="footer-item"><i class="fas fa-phone-alt"></i><span>0543 820 72 06</span></div>
       </div>
       
       <div class="footer-services">
@@ -944,26 +937,24 @@
         <a href="https://www.facebook.com/people/Dr-Bet%C3%BCl-TEMEL/61557414041796/" class="facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://wa.me/905438207206" class="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
       </div>
-      <div class="footer-links">
-        <a href="index.html">Ana Sayfa</a>
-        <a href="https://www.doktorbetultemel.com/#hakkinda">Hakkımda</a>
-        <a href="https://www.doktorbetultemel.com/#islemler">İşlemler</a>
-        <a href="https://www.doktorbetultemel.com/#sss">Merak Edilenler</a>
-        <a href="iletisim.html">İletişim</a>
-      </div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.doktorbetultemel.com/">Ana Sayfa</a>
+      <a href="https://www.doktorbetultemel.com/#hakkinda">Hakkımda</a>
+      <a href="https://www.doktorbetultemel.com/#islemler">İşlemler</a>
+      <a href="https://www.doktorbetultemel.com/#sss">Merak Edilenler</a>
+      <a href="https://www.doktorbetultemel.com/iletisim/">İletişim</a>
     </div>
     <div class="copyright">
       © 2025 Dr. Betül Temel - Tüm hakları saklıdır.
     </div>
   </footer>
 
-  <!-- FLOATING BUTTONS (SAĞ ALTTAKİ WHATSAPP VE ARAMA BUTONLARI) -->
   <div class="floating-buttons">
     <a href="https://wa.me/905438207206" class="float-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <a href="tel:+905438207206" class="float-btn phone"><i class="fas fa-phone"></i></a>
   </div>
 
-  <!-- CHAT BUBBLE (ANA SAYFA İLE AYNI) -->
   <div class="chat-bubble" id="chatBubble">
     <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
     <div class="chat-header">
@@ -979,69 +970,31 @@
 
   <script>
     (function() {
-      // Mobil menü işlemleri
+      // Mobil menü
       const hamburger = document.getElementById('hamburger');
       const overlay = document.getElementById('menuOverlay');
       const mobilePanel = document.getElementById('mobileMenuPanel');
       const closeBtn = document.getElementById('closeMenu');
       const mobileLinks = document.querySelectorAll('.mobile-nav-items a');
 
-      function openMenu() {
-        overlay.classList.add('active');
-        mobilePanel.classList.add('show');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeMenu() {
-        overlay.classList.remove('active');
-        mobilePanel.classList.remove('show');
-        document.body.style.overflow = '';
-      }
+      function openMenu() { overlay.classList.add('active'); mobilePanel.classList.add('show'); document.body.style.overflow = 'hidden'; }
+      function closeMenu() { overlay.classList.remove('active'); mobilePanel.classList.remove('show'); document.body.style.overflow = ''; }
       if (hamburger) hamburger.addEventListener('click', openMenu);
       if (closeBtn) closeBtn.addEventListener('click', closeMenu);
       if (overlay) overlay.addEventListener('click', closeMenu);
       
-      // Mobil menü linkleri - tıklanınca ana sayfaya yönlendir ve sayfa içi hedefe kaydır
+      // Mobil linkler: normal yönlendirme (anchor destekli)
       mobileLinks.forEach(link => {
         link.addEventListener('click', (e) => {
           const href = link.getAttribute('href');
-          if (href === 'iletisim.html') return;
-          e.preventDefault();
-          closeMenu();
-          // Sayfa içi anchor için
-          if (href && href.includes('#') && href !== '#') {
-            // Ana sayfaya yönlendir + hedefe kaydır
-            window.location.href = href;
-          } else if (href && href !== '#') {
+          if (href && href !== '#') {
+            closeMenu();
             window.location.href = href;
           }
         });
       });
 
-      // Üst menü linkleri - anchor içerenler için smooth scroll (ana sayfaya git ve kaydır)
-      const navMenuLinks = document.querySelectorAll('.nav-links a');
-      navMenuLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-          const href = link.getAttribute('href');
-          if (href && href.includes('#') && href !== 'iletisim.html') {
-            e.preventDefault();
-            window.location.href = href;
-          }
-        });
-      });
-
-      // Footer linkleri - aynı şekilde
-      const footerLinks = document.querySelectorAll('.footer-links a');
-      footerLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-          const href = link.getAttribute('href');
-          if (href && href.includes('#') && href !== 'iletisim.html') {
-            e.preventDefault();
-            window.location.href = href;
-          }
-        });
-      });
-
-      // Form: WhatsApp yönlendirmeli
+      // Form: WhatsApp yönlendirme
       const contactForm = document.getElementById('contactForm');
       if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -1050,38 +1003,26 @@
           const phone = document.getElementById('phone').value.trim();
           const email = document.getElementById('email').value.trim();
           const message = document.getElementById('message').value.trim();
-          if (!name || !phone) {
-            alert('Lütfen adınızı ve telefon numaranızı giriniz.');
-            return;
-          }
+          if (!name || !phone) { alert('Lütfen adınızı ve telefon numaranızı giriniz.'); return; }
           let waMessage = `Merhaba Dr. Betül Temel, randevu ve bilgi talebi oluşturmak istiyorum.%0A%0AAd Soyad: ${encodeURIComponent(name)}%0ATelefon: ${encodeURIComponent(phone)}`;
           if (email) waMessage += `%0AE-posta: ${encodeURIComponent(email)}`;
           if (message) waMessage += `%0AMesaj: ${encodeURIComponent(message)}`;
-          const waUrl = `https://wa.me/905438207206?text=${waMessage}`;
-          window.open(waUrl, '_blank');
+          window.open(`https://wa.me/905438207206?text=${waMessage}`, '_blank');
         });
       }
 
-      // chat bubble
+      // Chat bubble
       const chatBubble = document.getElementById('chatBubble');
       const chatClose = document.getElementById('chatClose');
       let chatDismissed = false;
-      if (chatClose) {
-        chatClose.addEventListener('click', () => {
-          chatBubble.classList.remove('show');
-          chatDismissed = true;
-        });
-      }
-      if (window.innerWidth <= 768) {
-        setTimeout(() => {
-          if (!chatDismissed && chatBubble) chatBubble.classList.add('show');
-        }, 10000);
-      }
+      if (chatClose) chatClose.addEventListener('click', () => { chatBubble.classList.remove('show'); chatDismissed = true; });
+      if (window.innerWidth <= 768) { setTimeout(() => { if (!chatDismissed && chatBubble) chatBubble.classList.add('show'); }, 10000); }
 
-      // Aktif menü vurgusu (iletisim.html için)
-      const allNavLinks = document.querySelectorAll('.nav-links a');
-      allNavLinks.forEach(link => {
-        if (link.getAttribute('href') === 'iletisim.html' || link.getAttribute('href') === '#iletisim') {
+      // Aktif menü vurgusu
+      const currentPath = window.location.pathname;
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === 'https://www.doktorbetultemel.com/iletisim/' || href === '/iletisim/' || href === 'iletisim.html') {
           link.classList.add('active');
         }
       });
@@ -1089,12 +1030,7 @@
       // Reveal animasyonları
       const revealElements = document.querySelectorAll('.reveal');
       const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target);
-          }
-        });
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('active'); observer.unobserve(entry.target); } });
       }, { threshold: 0.15 });
       revealElements.forEach(el => observer.observe(el));
     })();
